@@ -1,0 +1,319 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Infrastructure/Trivister.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/user/Projects/GlobalSecurityTokenService/Trivister.ApplicationServices/Trivister.ApplicationServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.ApplicationServices/Trivister.ApplicationServices.csproj",
+        "projectName": "Trivister.ApplicationServices",
+        "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.ApplicationServices/Trivister.ApplicationServices.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.ApplicationServices/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/user/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/vnu-viv-platform/vnu-platform-libraries/_packaging/vnu-platform-nuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/Trivister.Common.csproj": {
+                "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/Trivister.Common.csproj"
+              },
+              "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Trivister.Core.csproj": {
+                "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Trivister.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "LinqKit": {
+              "target": "Package",
+              "version": "[1.2.4, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/Trivister.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/Trivister.Common.csproj",
+        "projectName": "Trivister.Common",
+        "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/Trivister.Common.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/user/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/vnu-viv-platform/vnu-platform-libraries/_packaging/vnu-platform-nuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Trivister.Core.csproj": {
+                "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Trivister.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "LinqKit": {
+              "target": "Package",
+              "version": "[1.2.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Trivister.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Trivister.Core.csproj",
+        "projectName": "Trivister.Core",
+        "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Trivister.Core.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/user/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/vnu-viv-platform/vnu-platform-libraries/_packaging/vnu-platform-nuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Infrastructure/Trivister.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Infrastructure/Trivister.Infrastructure.csproj",
+        "projectName": "Trivister.Infrastructure",
+        "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Infrastructure/Trivister.Infrastructure.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/user/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/vnu-viv-platform/vnu-platform-libraries/_packaging/vnu-platform-nuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/user/Projects/GlobalSecurityTokenService/Trivister.ApplicationServices/Trivister.ApplicationServices.csproj": {
+                "projectPath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.ApplicationServices/Trivister.ApplicationServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Duende.IdentityServer": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Tye.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[0.10.0-alpha.21420.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

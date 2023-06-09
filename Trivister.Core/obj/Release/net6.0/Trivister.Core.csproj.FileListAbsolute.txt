@@ -1,0 +1,12 @@
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/bin/Release/net6.0/Trivister.Core.deps.json
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/bin/Release/net6.0/Trivister.Core.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/bin/Release/net6.0/Trivister.Core.pdb
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/Trivister.Core.csproj.AssemblyReference.cache
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/Trivister.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/Trivister.Core.AssemblyInfoInputs.cache
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/Trivister.Core.AssemblyInfo.cs
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/Trivister.Core.csproj.CoreCompileInputs.cache
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/Trivister.Core.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/refint/Trivister.Core.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/Trivister.Core.pdb
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/obj/Release/net6.0/ref/Trivister.Core.dll

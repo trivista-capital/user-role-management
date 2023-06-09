@@ -1,0 +1,12 @@
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/bin/Release/net6.0/PolicyManagement.deps.json
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/bin/Release/net6.0/PolicyManagement.dll
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/bin/Release/net6.0/PolicyManagement.pdb
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/PolicyManagement.csproj.AssemblyReference.cache
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/PolicyManagement.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/PolicyManagement.AssemblyInfoInputs.cache
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/PolicyManagement.AssemblyInfo.cs
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/PolicyManagement.csproj.CoreCompileInputs.cache
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/PolicyManagement.dll
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/refint/PolicyManagement.dll
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/PolicyManagement.pdb
+/Users/user/Projects/GlobalSecurityTokenService/PolicyManagement/obj/Release/net6.0/ref/PolicyManagement.dll

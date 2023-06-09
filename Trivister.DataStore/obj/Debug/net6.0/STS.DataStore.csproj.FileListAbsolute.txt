@@ -1,0 +1,12 @@
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/bin/Debug/net6.0/STS.DataStore.deps.json
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/bin/Debug/net6.0/STS.DataStore.dll
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/bin/Debug/net6.0/STS.DataStore.pdb
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/STS.DataStore.csproj.AssemblyReference.cache
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/STS.DataStore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/STS.DataStore.AssemblyInfoInputs.cache
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/STS.DataStore.AssemblyInfo.cs
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/STS.DataStore.csproj.CoreCompileInputs.cache
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/STS.DataStore.dll
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/refint/STS.DataStore.dll
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/STS.DataStore.pdb
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.DataStore/obj/Debug/net6.0/ref/STS.DataStore.dll

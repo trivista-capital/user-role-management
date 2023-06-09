@@ -1,0 +1,12 @@
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/bin/Debug/net6.0/STS.Core.deps.json
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/bin/Debug/net6.0/STS.Core.dll
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/bin/Debug/net6.0/STS.Core.pdb
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/STS.Core.csproj.AssemblyReference.cache
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/STS.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/STS.Core.AssemblyInfoInputs.cache
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/STS.Core.AssemblyInfo.cs
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/STS.Core.csproj.CoreCompileInputs.cache
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/STS.Core.dll
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/refint/STS.Core.dll
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/STS.Core.pdb
+/Users/user/Projects/FinancialManager/GlobalSecurityTokenService/STS.Core/obj/Debug/net6.0/ref/STS.Core.dll

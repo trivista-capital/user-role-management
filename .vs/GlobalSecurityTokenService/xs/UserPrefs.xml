@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="Multiple Projects">
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{2FAFA13B-A4E9-4ED5-BA73-E0D3D4D369E3}" ItemName="Trivister.API" ConfigurationId="API" />
+        <StartupItem ItemId="{1E2D13A3-3FE0-46A6-89FF-B4F3FF1A4380}" ItemName="Trivister.IDP" ConfigurationId="SelfHost" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trivister.API/appsettings.Development.json">
+    <Files>
+      <File FileName="Trivister.API/Properties/launchSettings.json" Line="26" Column="47" />
+      <File FileName="Trivister.API/Program.cs" Line="64" Column="38" />
+      <File FileName="Trivister.API/appsettings.json" Line="1" Column="1" />
+      <File FileName="Trivister.API/appsettings.Development.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GlobalSecurityTokenService">
+            <Node name="client" expanded="True">
+              <Node name="Trivister.API">
+                <Node name="Properties" expanded="True" />
+                <Node name="appsettings.json" expanded="True">
+                  <Node name="appsettings.Development.json" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.client.Trivister.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.client.Trivister.IDP PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Tests.Trivister.IntegrationTest PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

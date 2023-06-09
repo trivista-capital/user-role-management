@@ -1,0 +1,21 @@
+AssemblyInformationalVersion:
+InformationalVersion: 1.0.0
+Version: 1.0.0
+TargetFrameworks:
+RunCommand: /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP
+RunArguments:
+TargetPath: /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP.dll
+PublishDir: bin/Debug/net6.0/publish/
+AssemblyName: Trivister.IDP
+IntermediateOutputPath: obj/Debug/net6.0/
+TargetFramework: net6.0
+_ShortFrameworkIdentifier:
+_ShortFrameworkVersion:
+_TargetFrameworkVersionWithoutV: 6.0
+FrameworkReference: Microsoft.NETCore.App;Microsoft.AspNetCore.App
+ContainerBaseImage:
+ContainerBaseTag:
+MicrosoftNETPlatformLibrary:
+_AspNetCoreAppSharedFxIsEnabled:
+UsingMicrosoftNETSdkWeb: true
+AzureFunctionsVersion:

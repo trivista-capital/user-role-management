@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'SelfHost' " />
+  <ItemGroup>
+    <PackageReference Include="Duende.IdentityServer" Version="6.2.0" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.10.0-alpha.21420.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Trivister.ApplicationServices\Trivister.ApplicationServices.csproj" />
+    <ProjectReference Include="..\Trivister.Common\Trivister.Common.csproj" />
+    <ProjectReference Include="..\Trivister.DataStore\Trivister.DataStore.csproj" />
+    <ProjectReference Include="..\Trivister.Infrastructure\Trivister.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

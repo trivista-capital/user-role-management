@@ -1,0 +1,15 @@
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/bin/Release/net6.0/Trivister.Common.deps.json
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/bin/Release/net6.0/Trivister.Common.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/bin/Release/net6.0/Trivister.Common.pdb
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/bin/Release/net6.0/Trivister.Core.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/bin/Release/net6.0/Trivister.Core.pdb
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.csproj.AssemblyReference.cache
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.AssemblyInfoInputs.cache
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.AssemblyInfo.cs
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.csproj.CoreCompileInputs.cache
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.csproj.CopyComplete
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/refint/Trivister.Common.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/Trivister.Common.pdb
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.Common/obj/Release/net6.0/ref/Trivister.Common.dll
