@@ -17,6 +17,6 @@ public static class DependencyInjection
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         services.AddMediatR(typeof(LoginCommand).Assembly);
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
-        services.Configure<MailOptions>(configuration.GetSection("MailOptions"));
+      
     }
 }

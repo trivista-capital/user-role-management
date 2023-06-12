@@ -10,8 +10,7 @@ public class ApplicationUserConfiguration: IEntityTypeConfiguration<ApplicationU
     public void Configure(EntityTypeBuilder<ApplicationUser> builder)
     {
         var userId = Guid.Parse("363b37a0-c306-4472-a405-4b576334cca0");
-        var appuser = ApplicationUser.Factory.Create(userId, "Babafemi", "Oluwaseyi", "Ibitolu", 
-            "femi.ibitolu@gmail.com", "08122310370", "Ajah");
+        var appuser = ApplicationUser.Factory.Create(userId, "Babafemi", "Ibitolu", "femi.ibitolu@gmail.com");
         appuser.EmailConfirmed = false;
         appuser.NormalizedUserName = "femi.ibitolu@gmail.com".ToUpper();
         appuser.Address = "No 1 Jango street, wild wild west, Texas";

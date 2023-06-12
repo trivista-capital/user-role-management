@@ -6,6 +6,7 @@ using IdentityModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Trivister.ApplicationServices.Abstractions;
+using Trivister.Core.Entities;
 
 namespace Trivister.Infrastructure.IdentityConfig;
 
@@ -45,8 +46,8 @@ public sealed class ProfileService : IProfileService
                 new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
                 new Claim("RoleName", role.Name),
                 new Claim("RoleId", role.Id.ToString()),
-                new Claim("Permissions", string.Join(", ", permissions.Select(x => x.Permission)
-                    .Select(x => x.Name).ToArray()))
+                new Claim("Permissions", string.Join(", ", permissions.Any() ? permissions?.Select(x => x.Permission)
+                    .Select(x => x.Name).ToArray() : new List<Permission>()))
             };
             context.IssuedClaims = claims;
             _logger.LogInformation("Set the claims");

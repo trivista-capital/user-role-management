@@ -30,22 +30,24 @@ public class ResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
         if (isValidated.Item2.IsSuccess)
         {
             var permissions = await _idpDbContext!.RolesPermissions!.Include(x=>x.Role).Include(x=>x.Permission).Where(x => x.RoleId == role.Id).ToListAsync();
-
-            var claims = new List<Claim>
+            if (permissions.Any())
             {
-                new Claim(JwtClaimTypes.Subject, user.Id.ToString()),
-                new Claim(JwtClaimTypes.Email, user.Email),
-                new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
-                new Claim(ClaimTypes.Role, role?.Name)
-            };
-            foreach (var permission in permissions)
-            {
-                var claim = new Claim("permission", permission.Permission.Name);
-                context.Request.ClientClaims.Add(claim);
-            }
-            foreach (var claim in claims)
-            {
-                context.Request.ClientClaims.Add(claim);
+                var claims = new List<Claim>
+                {
+                    new Claim(JwtClaimTypes.Subject, user.Id.ToString()),
+                    new Claim(JwtClaimTypes.Email, user.Email),
+                    new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
+                    new Claim(ClaimTypes.Role, role?.Name)
+                };
+                foreach (var permission in permissions)
+                {
+                    var claim = new Claim("permission", permission.Permission.Name);
+                    context.Request.ClientClaims.Add(claim);
+                }
+                foreach (var claim in claims)
+                {
+                    context.Request.ClientClaims.Add(claim);
+                }   
             }
             context.Result = new GrantValidationResult(user.Id.ToString(), "password", null, "local", null);
             //return Task.FromResult(context.Result);

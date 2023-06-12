@@ -130,6 +130,7 @@
 /Users/user/Documents/Projects/STS/Trivister.IDP/bin/Debug/net6.0/web.config
 /Users/user/Documents/Projects/STS/Trivister.IDP/bin/Debug/net6.0/appsettings.Staging.json
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/web.config
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/appsettings.Development.json
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/appsettings.json
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/appsettings.Staging.json
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/keys/is-signing-key-2DC4DAF20D2C7F3B169BAB4EAD038C4B.json
@@ -145,12 +146,14 @@
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Azure.Identity.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Duende.IdentityServer.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Duende.IdentityServer.Storage.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/ElasticEmail.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/EntityFramework.SqlServer.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/EntityFramework.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/FluentValidation.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/IdentityModel.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/JsonSubTypes.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/LinqKit.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/LinqKit.Core.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/MediatR.dll
@@ -193,6 +196,8 @@
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Newtonsoft.Json.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Polly.dll
+/Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/RestSharp.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Serilog.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Serilog.AspNetCore.dll
 /Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/bin/Debug/net6.0/Serilog.Extensions.Hosting.dll

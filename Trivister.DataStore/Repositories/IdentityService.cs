@@ -127,11 +127,11 @@ public class IdentityService: IIdentityService
             return result.Succeeded ? (ErrorResult.Ok(), user.Id.ToString()) : (ErrorResult.Fail("Unable to create user"), user.Id.ToString());
         }
 
-        public async Task<(ErrorResult Result, ApplicationUser user)> CreateUserAsync(Guid id, string firstName, string middleName, string lastName, string email, string phone, string password, string address)
+        public async Task<(ErrorResult Result, ApplicationUser user)> CreateUserAsync(Guid id, string firstName, string lastName, string email, string password)
         {
             var doesUserExist = await _userManager.FindByNameAsync(email);
             if (doesUserExist != null) return (ErrorResult.Fail("Duplicate user"), ApplicationUser.Factory.Create());
-            var user = ApplicationUser.Factory.Create(id, firstName, middleName,  lastName,  email, phone, address);
+            var user = ApplicationUser.Factory.Create(id, firstName,  lastName,  email);
             var result = await _userManager.CreateAsync(user, password);
             if (result == null)
             {
@@ -384,6 +384,19 @@ public class IdentityService: IIdentityService
             }
             return ErrorResult.Ok(true);
         }
+        
+        public async Task<ErrorResult<(Guid, bool)>> CreateRoleReturnIdAsync(ApplicationRole mappedRole)
+        {
+            Guid id = Guid.Empty;
+            if (!await _roleManager.RoleExistsAsync(mappedRole.Name))
+            {
+                mappedRole.NormalizedName = mappedRole.Name.ToUpper();
+                var result = await _roleManager.CreateAsync(mappedRole);
+                id = mappedRole.Id;
+                return result.Succeeded ? ErrorResult.Ok((mappedRole.Id, true)) : ErrorResult.Fail<(Guid, bool)>("Adding Role Failed");
+            }
+            return ErrorResult.Ok((id, true));
+        }
 
         public async Task<ErrorResult<bool>> UpdateUserAsync(ApplicationUser applicationUser)
         {
@@ -394,22 +407,24 @@ public class IdentityService: IIdentityService
         
         public async Task<ErrorResult<bool>> AssignPermissionsToRole(Guid roleId, List<int> permissionIds)
         {
-            List<RolesPermission> rolePermissionList = new List<RolesPermission>();
+            var rolePermissionsToDelete = new List<RolesPermission>();
             
-            var rolesPermissions =  await _context?.RolesPermissions?.Include(x=>x.Permission).Where(x=>x.RoleId == roleId).ToListAsync();
-            foreach (var id in permissionIds)
+            var rolesPermissions =  await _context?.RolesPermissions?
+                                                    .Include(x=>x.Permission)
+                                                    .Include(x=>x.Role)
+                                                    .Where(x=>x.RoleId == roleId).Select(x=>x).ToListAsync();
+
+            foreach (var permission in rolesPermissions)
             {
-                if (rolesPermissions.All(x => x.PermissionId != id))
-                {
-                    var rp = new RolesPermission
-                    {
-                        RoleId = roleId, PermissionId = id
-                    };
-                    rolePermissionList.Add(rp);
-                }
+                var rolePermissionToDelete = await _context?.RolesPermissions?.Where(x => x.PermissionId == permission.PermissionId).Select(x => x).FirstOrDefaultAsync();
+                rolePermissionsToDelete.Add(rolePermissionToDelete);
             }
 
-            if (!rolePermissionList.Any()) return ErrorResult.Fail<bool>("Duplicate permissions");
+            _context.RolesPermissions.RemoveRange(rolePermissionsToDelete);
+            await _context.SaveChangesAsync(new CancellationToken());
+
+            var rolePermissionList = permissionIds.Select(permissionId => new RolesPermission { RoleId = roleId, PermissionId = permissionId }).ToList();
+
             await _context.RolesPermissions.AddRangeAsync(rolePermissionList);
             var saved = await _context.SaveChangesAsync(new CancellationToken());
             return saved > 0 ? ErrorResult.Ok(true) : ErrorResult.Fail<bool>("Unable to permissions to role");

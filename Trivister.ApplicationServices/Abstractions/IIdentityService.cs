@@ -12,8 +12,8 @@ public interface IIdentityService
         
         Task<(ErrorResult Result, string UserId)> CreateUserAsync(string userName, string password);
 
-        Task<(ErrorResult Result, ApplicationUser user)> CreateUserAsync(Guid id, string firstName, string middleName,
-                string lastName, string email, string phone, string password, string address);
+        Task<(ErrorResult Result, ApplicationUser user)> CreateUserAsync(Guid id, string firstName,
+                string lastName, string email, string password);
         Task<string> GetUserNameAsync(string userId);
         Task<ApplicationUser> GetUserNameByUserNameAsync(string userName, Guid? userId = null);
         Task<ErrorResult<ApplicationUser>> GetUserByEmail(string email);
@@ -41,6 +41,7 @@ public interface IIdentityService
         Task<ErrorResult<bool>> RemoveUserFromRole(ApplicationUser applicationUser, string roleName);
         Task<ErrorResult<bool>> ResetPasswordAsync(ApplicationUser user, string code, string password);
         Task<ErrorResult<bool>> CreateRoleAsync(ApplicationRole mappedRole);
+        Task<ErrorResult<(Guid, bool)>> CreateRoleReturnIdAsync(ApplicationRole mappedRole);
         Task<ErrorResult<bool>> UpdateUserAsync(ApplicationUser applicationUser);
         Task<ErrorResult> CreateUserAsync(string password, ApplicationUser user);
         Task<ErrorResult<ApplicationUser>> GetUserByEmailOrPhone(string username);

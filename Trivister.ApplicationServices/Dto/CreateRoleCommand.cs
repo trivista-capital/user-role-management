@@ -1,3 +1,3 @@
 namespace Trivister.ApplicationServices.Dto;
 
-public sealed record CreateRoleCommand(string RoleName, string Description);
+public sealed record CreateRoleCommand(Guid Id, string RoleName, string Description);

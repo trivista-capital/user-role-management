@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Trivister.ApplicationServices.Abstractions;
+using Trivister.ApplicationServices.Common.Options;
 using Trivister.ApplicationServices.Exceptions;
 using Trivister.Common.Model;
 using Trivister.Common.Options;

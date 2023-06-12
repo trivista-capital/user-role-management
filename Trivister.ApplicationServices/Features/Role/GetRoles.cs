@@ -87,7 +87,6 @@ public sealed class GetRolesByIdQueryHandler : IRequestHandler<GetRolesByIdQuery
     
     public async Task<ErrorResult<List<GetRolesDto>>> Handle(GetRolesByIdQuery request, CancellationToken cancellationToken)
     {
-        var permissionsList = new List<Permission>();
         var getRolesDtoList = new List<GetRolesDto>();
         var queryAbleRoles = _identityService.GetAllRoles();
         var applicationRoles = queryAbleRoles.ToList();
@@ -103,19 +102,32 @@ public sealed class GetRolesByIdQueryHandler : IRequestHandler<GetRolesByIdQuery
             };
 
             var permissionIds = await _dbContext.RolesPermissions.Where(x => x.RoleId == role.Id).ToListAsync(cancellationToken);
-            foreach (var permissionId in permissionIds)
+            if (permissionIds.Any())
             {
-                var permission = new Permission
+                var permissionsList = new List<Permission>();
+                foreach (var permissionId in permissionIds)
                 {
-                    Id = permissionId.PermissionId,
-                    Name = await _dbContext.Permissions.Where(x => x.Id == permissionId.PermissionId).Select(x=>x.Name).FirstOrDefaultAsync(cancellationToken)
-                };
-                permissionsList.Add(permission);
-            }
+                    var permission = new Permission
+                    {
+                        Id = permissionId.PermissionId,
+                        Name = await _dbContext.Permissions.Where(x => x.Id == permissionId.PermissionId).Select(x=>x.Name).FirstOrDefaultAsync(cancellationToken)
+                    };
+                    permissionsList.Add(permission);
+                }
 
-            getRolesDto.Permissions = GetRolesDto.ToGetRolePermissionsDto(permissionsList.AsEnumerable());
-            
-            getRolesDtoList.Add(getRolesDto);
+                getRolesDto.Permissions = permissionsList.AsEnumerable().Select(x =>
+                    new GetRolesDto.GetRolesPermissionsDto()
+                    {
+                        PermissionId = x.Id,
+                        Name = x.Name
+                    }).ToList(); 
+                getRolesDtoList.Add(getRolesDto);
+                //permissionsList.Clear();
+            }
+            else
+            {
+                getRolesDtoList.Add(getRolesDto);   
+            }
         }
         return ErrorResult.Ok(getRolesDtoList);
 

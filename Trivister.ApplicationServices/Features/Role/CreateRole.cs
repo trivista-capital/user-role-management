@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Trivister.ApplicationServices.Abstractions;
 using Trivister.ApplicationServices.Exceptions;
+using Trivister.ApplicationServices.Features.Role.EventHandlers;
 using Trivister.Common.Model;
 using Trivister.Core.Entities;
 
@@ -42,25 +45,39 @@ public class CreateRoleCommandValidation : AbstractValidator<CreateRoleCommand>
     }   
 }
 
-public sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, ErrorResult< bool>>
+public sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, ErrorResult<bool>>
 {
     private readonly IIdentityService _identityService;
     private readonly IGlobalTSDbContext _dbContext;
-    private readonly ICustomerClient _customerClient;
-    
-    public CreateRoleCommandHandler(IGlobalTSDbContext dbContext, IIdentityService identityService, ICustomerClient customerClient)
+    private readonly ILogger<CreateRoleCommandHandler> _logger;
+    private readonly IPublisher _publisher;
+
+    public CreateRoleCommandHandler(IGlobalTSDbContext dbContext, IIdentityService identityService, ILogger<CreateRoleCommandHandler> logger, IServiceProvider provider, IPublisher publisher)
     {
         _dbContext = dbContext;
         _identityService = identityService;
-        _customerClient = customerClient;
+        _logger = logger;
+        _publisher = publisher;
     }
     
     public async Task<ErrorResult<bool>> Handle(CreateRoleCommand request, CancellationToken cancellationToken)
     {
-        var isRoleCreated = await _identityService.CreateRoleAsync(ApplicationRole.Factory.Create(request.RoleName, request.Description));
-        if (!isRoleCreated.IsSuccess)
-            throw new BadRequestException(isRoleCreated.Message);
-        await _customerClient.PublishRole(new Dto.CreateRoleCommand(request.RoleName, request.Description));
-        return ErrorResult.Ok<bool>(isRoleCreated.IsSuccess);
+        try
+        {
+            _logger.LogInformation("Creating role");
+            var result = await _identityService.CreateRoleReturnIdAsync(ApplicationRole.Factory.Create(request.RoleName, request.Description));
+            var (Id, isCreated) = result.Value;
+            if (!isCreated)
+                throw new BadRequestException(result.Message);
+            _logger.LogInformation("Role exists");
+            await _publisher.Publish(new RoleCreatedEvent(Id, request.RoleName, request.Description), cancellationToken);
+            return ErrorResult.Ok<bool>(isCreated);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occured in CreateRoleCommandHandler");
+            return ErrorResult.Fail<bool>(ex.ToString());
+        }
     }
+    
 }

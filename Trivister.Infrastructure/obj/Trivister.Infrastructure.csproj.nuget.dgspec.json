@@ -72,6 +72,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.*, )"
             }
           },
           "imports": [
@@ -274,6 +278,10 @@
               "target": "Package",
               "version": "[6.2.0, )"
             },
+            "ElasticEmail": {
+              "target": "Package",
+              "version": "[4.0.22, )"
+            },
             "IdentityModel": {
               "target": "Package",
               "version": "[6.1.0, )"
@@ -289,6 +297,10 @@
             "Microsoft.Tye.Extensions.Configuration": {
               "target": "Package",
               "version": "[0.10.0-alpha.21420.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.*, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

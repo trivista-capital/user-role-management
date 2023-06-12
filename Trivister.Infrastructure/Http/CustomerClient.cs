@@ -34,15 +34,19 @@ public class CustomerClient: ICustomerClient
         catch (Exception ex)
         {
             _logger.LogError(ex, ex.Message);
+            throw;
         }
     }
 
     public async Task PublishRole(CreateRoleCommand role)
     {
+        _logger.LogInformation("Entered the PublishRole http method");
         try
         {
             var body = new StringContent(JsonConvert.SerializeObject(role), Encoding.UTF8, "application/json");
+            _logger.LogInformation("About posting to loan app");
             var httpResult = await _client.PostAsync("addRole", body);
+            _logger.LogInformation("Posted to loan app");
             var result = await httpResult.Content.ReadAsStringAsync();
             var deserializedResponse = JsonConvert.DeserializeObject(result);
             if (httpResult.IsSuccessStatusCode)

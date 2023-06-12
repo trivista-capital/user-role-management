@@ -11,19 +11,16 @@ public sealed class ApplicationUser: IdentityUser<Guid>
         LastModified=DateTime.UtcNow;
         IsDisabled = false;
     }
-    private ApplicationUser(Guid id, string firstName, string middleName, string lastName, string email, string phone, string address)
+    private ApplicationUser(Guid id, string firstName, string lastName, string email)
     {
         Id = id;
         Email = email;
-        PhoneNumber = phone;
         FirstName = firstName;
-        MiddleName = middleName;
         UserName = email;
         LastName = lastName;
         CreatedOn=DateTime.UtcNow;
         LastModified=DateTime.UtcNow;
         IsDisabled = false;
-        Address = address;
     }
     
     private ApplicationUser(string username, string password)
@@ -54,9 +51,9 @@ public sealed class ApplicationUser: IdentityUser<Guid>
     
     public class Factory
     {
-        public static ApplicationUser Create(Guid id, string firstName, string middleName, string lastName, string email, string phone, string address)
+        public static ApplicationUser Create(Guid id, string firstName, string lastName, string email)
         {
-            return new ApplicationUser(id, firstName, middleName, lastName, email, phone, address);
+            return new ApplicationUser(id, firstName, lastName, email);
         }
         
         public static ApplicationUser Create(string username, string password)
@@ -116,7 +113,6 @@ public sealed class ApplicationUser: IdentityUser<Guid>
         this.CreatedOn = DateTime.UtcNow;
         return this;
     }
-    
     
     public void Apply(object @event)
     {

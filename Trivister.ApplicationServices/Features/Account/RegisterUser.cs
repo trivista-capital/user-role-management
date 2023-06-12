@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Trivister.ApplicationServices.Abstractions;
 using Trivister.ApplicationServices.Dto;
 using Trivister.ApplicationServices.Exceptions;
-using Trivister.ApplicationServices.Features.OTP_Management;
+using Trivister.ApplicationServices.Features.Account.EventHandlers;
 using Trivister.Common.Model;
 using Trivister.Core.Entities;
 
@@ -42,31 +42,31 @@ public class RegistrationCommandValidation : AbstractValidator<RegistrationComma
 
 /// <inheritdoc />
 // ReSharper disable once ClassNeverInstantiated.Global
-public record RegistrationCommand(string Username, string Email, string FirstName, string MiddleName, string LastName, string Phone, string UserType, string Password, string Address) : IRequest<ErrorResult<string>>;
+public record RegistrationCommand(string FirstName, string LastName, string Email, string Password, string UserType) : IRequest<ErrorResult<string>>;
 
 public class RegistrationCommandHandler: IRequestHandler<RegistrationCommand, ErrorResult<string>>
 {
-    private readonly IMediator _mediator;
     private readonly IIdentityService _identityService;
     private readonly ICustomerClient _customerClient;
-    public RegistrationCommandHandler(IMediator mediator, 
-                                      IIdentityService identityService, 
-                                      ICustomerClient customerClient)
+    private readonly IPublisher _publisher;
+    
+    public RegistrationCommandHandler(IIdentityService identityService, 
+                                      ICustomerClient customerClient,
+                                      IPublisher publisher)
     {
-
-        _mediator = mediator;
         _identityService = identityService;
         _customerClient = customerClient;
+        _publisher = publisher;
     }
 
     public async Task<ErrorResult<string>> Handle(RegistrationCommand request, CancellationToken cancellationToken)
     {
-        ApplicationUser user = ApplicationUser.Factory.Create();
+        //ApplicationUser user = ApplicationUser.Factory.Create();
         var generatedPassword = new Random(7).ToString();
         Guid userId = Guid.NewGuid();
         var password = string.IsNullOrEmpty(request.Password) ? generatedPassword : request.Password;
-        var (result, appuser) = await _identityService.CreateUserAsync(userId, request.FirstName, request.MiddleName, request.LastName,
-            request.Email, request.Phone, password!, request.Address);
+        var (result, appuser) = await _identityService.CreateUserAsync(userId, request.FirstName, request.LastName, 
+            request.Email, password!);
         if (!result.IsSuccess) throw new BadRequestException(result.Error);
         var isUseRoleCreatedResponse = await _identityService.AddUserToRole(appuser, request.UserType);
         var (roleId, isCreated) = isUseRoleCreatedResponse.Value;
@@ -75,14 +75,18 @@ public class RegistrationCommandHandler: IRequestHandler<RegistrationCommand, Er
             await _identityService.DeleteUserAsync(appuser.Id.ToString());
             throw new BadRequestException(isUseRoleCreatedResponse.Error);
         }
-        //Call and send OTP here
-        //await _mediator.Send(new OTPCommand(request.Email), cancellationToken);
+        
         //appuser!.Apply(new UserEvents.UserCreated() { Email = appuser.Email, Id = userId });
+        _publisher.Publish(new UserRegisteredEvent()
+        {
+            Email = request.Email
+        });
+            
         await _customerClient.PublishCustomer(new AddCustomerCommand
         {
-            Id = userId, FirstName = request.FirstName, MiddleName = request.MiddleName, LastName = request.LastName,
-            Dob = "03/05/1977", Email = request.Email, PhoneNumber = request.Phone, Sex = "Male", RoleId = roleId,
-            Address = request.Address
+            Id = userId, FirstName = request.FirstName, MiddleName = "", LastName = request.LastName,
+            Dob = "03/05/1977", Email = request.Email, PhoneNumber = "", Sex = "Male", RoleId = roleId,
+            Address = ""
         });
         return ErrorResult.Ok<string>("Registered successfully");
     }

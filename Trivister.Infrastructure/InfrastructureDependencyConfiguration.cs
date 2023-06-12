@@ -4,9 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Trivister.ApplicationServices.Abstractions;
+using Trivister.ApplicationServices.Common.Options;
 using Trivister.Common.Options;
 using Trivister.Infrastructure.Http;
 using Trivister.Infrastructure.IdentityConfig;
+using Trivister.Infrastructure.MailService;
 
 namespace Trivister.Infrastructure;
 
@@ -34,10 +36,24 @@ public static class InfrastructureDependencyConfiguration
             //client.BaseAddress = new Uri(serviceProvider!.Value.IdentityUrl);
         });
         builder.AddScoped<ICustomerClient, CustomerClient>();
-        builder.AddHttpClient<ICustomerClient, CustomerClient>(client =>
+        
+        builder.AddHttpClient<ICustomerClient, CustomerClient>((provider, client) =>
         {
             client.BaseAddress = new Uri(configuration.GetSection("LoanAppBaseAddress").Value);
-        });
+        }).ConfigurePrimaryHttpMessageHandler(() => new SocketsHttpHandler()
+        {
+            PooledConnectionLifetime = TimeSpan.FromMinutes(15)
+        }).SetHandlerLifetime(Timeout.InfiniteTimeSpan);
+        
+        builder.AddHttpClient<IMailManager, MailManager>((provider, client) =>
+        {
+            var serviceProvider = provider.GetService<IOptions<MailOptions>>();
+            client.BaseAddress = new Uri(serviceProvider.Value.BaseAddress);
+        }).ConfigurePrimaryHttpMessageHandler(() => new SocketsHttpHandler()
+        {
+            PooledConnectionLifetime = TimeSpan.FromMinutes(15)
+        }).SetHandlerLifetime(Timeout.InfiniteTimeSpan);
+        
         return builder;
     }
 }
