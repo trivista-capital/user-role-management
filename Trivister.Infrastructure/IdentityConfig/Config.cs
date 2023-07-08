@@ -25,6 +25,10 @@ public static class Config
             new ApiResource("travisterApiLoanApi", "TravisterApi LoanApi", new[]{ "role", "permission" })
             {
                 Scopes = {"travisterApiLoanApi.FullAccess", "travisterApiLoanApi.Read", "travisterApiLoanApi.Write", "fullAccess"}
+            },
+            new ApiResource("trivistaFrontendClient", "client", new[]{ "role", "permission" })
+            {
+                Scopes = {"trivistaFrontendClient.FullAccess", "trivistaFrontendClient.Read", "trivistaFrontendClient.Write", "fullAccess"}
             }
         };
     //API can have api scopes
@@ -37,6 +41,9 @@ public static class Config
             new ApiScope("travisterApiLoanApi.FullAccess"),
             new ApiScope("travisterApiLoanApi.Read"),
             new ApiScope("travisterApiLoanApi.Write"),
+            new ApiScope("trivistaFrontendClient.FullAccess"),
+            new ApiScope("trivistaFrontendClient.Read"),
+            new ApiScope("trivistaFrontendClient.Write"),
             new ApiScope("fullAccess")
         };
 
@@ -50,7 +57,12 @@ public static class Config
                 AllowedGrantTypes = GrantTypes.Code,
                 RedirectUris =
                 {
-                    "https://localhost:7262/signin-oidc"
+                    "https://localhost:7262/signin-oidc",
+                    "http://borrow-ease-admin.trivistang.com/signin-oidc",
+                    "http://localhost:3000/signin-oidc",
+                    //"http://localhost:3000/admin/signin-oidc",
+                    "https://oauth.pstmn.io/v1/callback"
+                    
                 },
                 PostLogoutRedirectUris =
                 {
@@ -63,11 +75,18 @@ public static class Config
                     "roles",
                     "permissions",
                     "travisterApi.FullAccess",
+                    "trivistaFrontendClient.FullAccess",
                     "fullAccess"
                 },
                 ClientSecrets=
                 {
                     new Secret("secret".Sha256())
+                },
+                AllowedCorsOrigins = new List<string>
+                {
+                    "http://localhost:3000"
+                    //"http://localhost:3000/Admin",
+                    //"http://borrow-ease-admin.trivistang.com"
                 }
             },
             new Client()
@@ -118,6 +137,51 @@ public static class Config
                 {
                     new Secret("secret".Sha256())
                 }
+            },
+            new Client()
+            {
+                ClientName = "JavascriptClient",
+                ClientId = "TrivistaClient",
+                AllowedGrantTypes = new [] {GrantType.AuthorizationCode, GrantType.ResourceOwnerPassword },
+                //RequirePkce = true,
+                AccessTokenLifetime = 300,
+                RequireClientSecret = false,
+                AllowAccessTokensViaBrowser = true,
+                RedirectUris =
+                {
+                    "https://localhost:7262/signin-oidc",
+                    "http://borrow-ease-admin.trivistang.com/signin-oidc",
+                    "http://localhost:3000/signin-oidc",
+                    //"http://localhost:3000/admin/signin-oidc",
+                    "https://oauth.pstmn.io/v1/callback"
+                },
+                PostLogoutRedirectUris =
+                {
+                    "https://localhost:7262/signout-callback-oidc",
+                    "http://borrow-ease-admin.trivistang.com/signout-callback-oidc",
+                    "http://localhost:3000/signout-callback-oidc",
+                    "http://localhost:3000/Admin/signout-callback-oidc"
+                },
+                AllowedScopes =
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "roles",
+                    "permissions",
+                    "trivistaFrontendClient.FullAccess",
+                    "fullAccess"
+                },
+                AllowedCorsOrigins = new List<string>
+                {
+                    "http://localhost:3000"
+                    //"http://localhost:3000/Admin",
+                    //"http://borrow-ease-admin.trivistang.com"
+                },
+                ClientSecrets=
+                {
+                    new Secret("secret".Sha256())
+                },
+                AllowOfflineAccess = true,
             }
         };
 }

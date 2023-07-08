@@ -8,6 +8,7 @@ using Microsoft.Extensions.Options;
 using Trivister.ApplicationServices.Abstractions;
 using Trivister.ApplicationServices.Common.Options;
 using Trivister.ApplicationServices.Exceptions;
+using Trivister.ApplicationServices.Features.Account.EventHandlers;
 using Trivister.Common.Model;
 using Trivister.Common.Options;
 using Trivister.Core.Entities;
@@ -86,22 +87,11 @@ public class ResendEmailConfirmationLinkCommandHandler : IRequestHandler<ResendE
             var baseConfirmationLink = $"{_configuration.GetSection("EmailConfirmationBaseUrl").Value}";
             var confirmEmail = $"{baseConfirmationLink}?email={user.Value.Email}&token={link.Value}";
             _logger.LogInformation("About publishing to the bus");
-            // await _publisher.Publish(new LeatherbackSharedLibrary.Messages.SendEmailMessage()
-            // {
-            //     To = new List<string>() { mailObject.To },
-            //     Subject = mailObject.Subject,
-            //     Bcc = new List<string>(),
-            //     Cc = new List<string>(),
-            //     Attachments = new List<string>(),
-            //     EmailProviderName = "",
-            //     EmailTemplateName = "EmailVerificationTemplate",
-            //     ApplicationName = "Authentication service",
-            //     ReplaceableParameters = new List<string>()
-            //     {
-            //         request.Email,
-            //         confirmEmail
-            //     }
-            // });
+            _publisher.Publish(new GeneratePasswordResetTokenEvent()
+            { 
+                Email = request.Email,
+                ConfirmationLink = confirmEmail
+            });
             _logger.LogInformation("Publish to the bus");
             return ErrorResult.Ok(request.Email);
         }

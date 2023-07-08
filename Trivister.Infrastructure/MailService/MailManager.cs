@@ -5,6 +5,7 @@ using ElasticEmail.Model;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Trivister.ApplicationServices.Abstractions;
+using Trivister.ApplicationServices.Common.Helper;
 using Trivister.ApplicationServices.Common.Options;
 using Trivister.ApplicationServices.Dto;
 
@@ -23,40 +24,83 @@ public sealed class MailManager: IMailManager
         _mailOptions = mailOptions.Value;
     }
     
-    public void BuildOTPMessage(string otp, string email)
+    public void BuildSignUpMessage(string otp, string to, string name)
     {
         var builder = new MailBuilder();
-        var mailObject = builder.WithToEmail(email)
+        var mailObject = builder.WithToEmail(to)
             .WithFromEmail(_mailOptions.From)
             .WithOTPSubject(_mailOptions.OTPMailSubject)
-            .WithOTPMessage(_mailOptions.OTPMailTemplate, otp, email)
+            .WithSignUpMessageMessage(name, otp)
             .BuildOtpMailDto(); 
-        this.SendEmail(mailObject);
+        SendEmail(mailObject);
+    }
+    
+    public void BuildPasswordSuccessfullyResetMessage(string to, string name)
+    {
+        var builder = new MailBuilder();
+        var mailObject = builder.WithToEmail(to)
+            .WithFromEmail(_mailOptions.From)
+            .WithOTPSubject(_mailOptions.OTPMailSubject)
+            .WithPasswordSuccessfullyResetMessage(name)
+            .BuildOtpMailDto(); 
+        SendEmail(mailObject);
     }
 
-    // private async Task SendMail(MailObject dto)
-    // {
-    //     dto.ApiKey = _mailOptions?.APIKey;
-    //     try
-    //     {
-    //         var body = JsonConvert.SerializeObject(dto);
-    //         HttpContent content = new StringContent(body, Encoding.Default, "application/json");
-    //         //_client.DefaultRequestHeaders.Add("AUTHORIZATIONS", _mailOptions?.APIKey);
-    //         var postUrl = $"v2{_mailOptions.MailSubPath}?apikey={_mailOptions.APIKey}&subject={dto.Subject}&from={dto.From}&fromName=&sender={dto.From}&senderName=&msgFrom={dto.BodyAmp}&msgFromName=&replyTo=&replyToName=&to=&msgTo={dto.MsgTo}&msgCC=&msgBcc=&lists=&segments=&mergeSourceFilename=&dataSource=&channel=&bodyHtml=&bodyText=&charset={dto.CharSet}&charsetBodyHtml=&charsetBodyText=&encodingType=ApiTypes.EncodingType.None&template=&headers_firstname=firstname: myValueHere&postBack=&merge_firstname=John&timeOffSetMinutes=&poolName=My Custom Pool&isTransactional=true&attachments=&trackOpens=true&trackClicks=true&utmSource=source1&utmMedium=medium1&utmCampaign=campaign1&utmContent=content1&bodyAmp=&charsetBodyAmp=";
-    //         var response = await _client.PostAsync(postUrl, content);
-    //         if (response.IsSuccessStatusCode)
-    //         {
-    //             var stringResponse = await response.Content.ReadAsStringAsync();
-    //             //var serializedResponse = JsonConvert.DeserializeObject<string>(stringResponse);
-    //         }
-    //         await Task.CompletedTask;
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         Console.WriteLine(ex);
-    //         throw;
-    //     } 
-    // }
+    public void BuildForgotPasswordMessage(string message, string to)
+    {
+        var builder = new MailBuilder();
+        var mailObject = builder.WithToEmail(to)
+            .WithFromEmail(_mailOptions.From)
+            .WithOTPSubject(_mailOptions.PasswordResetSubject)
+            .WithForgotPasswordMessage(_mailOptions.PasswordResetMailTemplate, message)
+            .BuildOtpMailDto(); 
+        SendEmail(mailObject);
+    }
+
+    public void BuildResetPasswordMessage(string confirmationLink, string to)
+    {
+        var builder = new MailBuilder();
+        var mailObject = builder.WithToEmail(to)
+            .WithFromEmail(_mailOptions.From)
+            .WithOTPSubject(_mailOptions.PasswordResetSubject)
+            .WithForgotPasswordMessage(confirmationLink, to)
+            .BuildOtpMailDto(); 
+        SendEmail(mailObject);
+    }
+    
+    public void BuildWelcomeMessage(string name, string to)
+    {
+        var builder = new MailBuilder();
+        var mailObject = builder.WithToEmail(to)
+            .WithFromEmail(_mailOptions.From)
+            .WithOTPSubject(_mailOptions.WelcomeMessageSubject)
+            .WithWelcomeMessage(name)
+            .BuildOtpMailDto(); 
+        SendEmail(mailObject);
+    }
+    
+    public void BuildAdminUserInvitationMessage(string to, string adminName)
+    {
+        var builder = new MailBuilder();
+        var mailObject = builder.WithToEmail(to)
+            .WithFromEmail(_mailOptions.From)
+            .WithOTPSubject(_mailOptions.AdminWelcomeSubject)
+            .WithAdminUserInvitationMessage(adminName)
+            .BuildOtpMailDto(); 
+        SendEmail(mailObject);
+    }
+
+    public void BuildMessageToAdminOnCustomerRegistrationMessage(string to, string adminName, string customerFullName,
+        string customerEmail, string customerPhone, string dateOfRegistration)
+    {
+        var builder = new MailBuilder();
+        var mailObject = builder.WithToEmail(to)
+            .WithFromEmail(_mailOptions.From)
+            .WithOTPSubject(_mailOptions.AdminNotificatinOfCustomerRegistrationSubject)
+            .WithMessageToAdminOnCustomerRegistrationMessage(adminName,  customerFullName, customerEmail,  customerPhone, dateOfRegistration)
+            .BuildOtpMailDto(); 
+        SendEmail(mailObject);
+    }
 
     private void SendEmail(MailObject dto)
     { 
@@ -77,7 +121,7 @@ public sealed class MailManager: IMailManager
         {
             ContentType = BodyContentType.HTML,
             Charset = "utf-8",
-            Content = "<h1>Mail content</h1>"
+            Content = dto.BodyAmp
         };
         BodyPart plainTextBodyPart = new BodyPart
         {

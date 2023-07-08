@@ -1,11 +1,12 @@
+using Trivister.ApplicationServices.Common.Helper;
 using Trivister.ApplicationServices.Dto;
 
 namespace Trivister.Infrastructure.MailService;
 
 public sealed class MailBuilder: IMailBuilder
 {
-    private string _otpMessage;
-    private string _otpSubject;
+    private string _message;
+    private string _subject;
     private string _toEmail;
     private string _fromEmail;
 
@@ -21,15 +22,55 @@ public sealed class MailBuilder: IMailBuilder
         return this;
     }
     
-    public MailBuilder WithOTPMessage(string otpMessage, string otp, string email)
+    public MailBuilder WithSignUpMessageMessage(string name, string otp)
     {
-        _otpMessage = string.Format(otpMessage, email, otp);
+        var rawMailTemplate = EmailTemplateHelper.ExtractMailTemplate("page1-sign-up-otp.html");
+        _message = string.Format(rawMailTemplate, name, otp);
+        return this;
+    }
+
+    public MailBuilder WithForgotPasswordMessage(string name, string confirmationLink)
+    {
+        var rawMailTemplate = EmailTemplateHelper.ExtractMailTemplate("page2-forgot-password-otp.html");
+        _message = string.Format(rawMailTemplate, name, confirmationLink);
+        return this;
+    }
+
+    public MailBuilder WithPasswordSuccessfullyResetMessage(string name)
+    {
+        var rawMailTemplate = EmailTemplateHelper.ExtractMailTemplate("page3-password-reset-successfully.html");
+        _message = string.Format(rawMailTemplate, name);
+        return this;
+    }
+    
+    public MailBuilder WithWelcomeMessage(string name)
+    {
+        var rawMailTemplate = EmailTemplateHelper.ExtractMailTemplate("page4-welcome-to-borrowease.html");
+        _message = rawMailTemplate.Replace("{Customer's Name}", name);
+        return this;
+    }
+    
+    public MailBuilder WithAdminUserInvitationMessage(string adminName)
+    {
+        var rawMailTemplate = EmailTemplateHelper.ExtractMailTemplate("page13-new-admin-user.html");
+        _message = rawMailTemplate.Replace("{Admin's Name}", adminName);
+        return this;
+    }
+    
+    public MailBuilder WithMessageToAdminOnCustomerRegistrationMessage(string adminName, string customerFullName, string customerEmail, string customerPhone, string dateOfRegistration)
+    {
+        var rawMailTemplate = EmailTemplateHelper.ExtractMailTemplate("page15-new-customer-message-to-admin.html");
+        _message = rawMailTemplate.Replace("{Admin's Name}", adminName)
+                                  .Replace("{Customer's Full Name}", customerFullName)
+                                  .Replace("{Customer's Email Address}", customerEmail)
+                                  .Replace("{Customer's Phone Number}", customerPhone)
+                                  .Replace("{Date of Registration}", dateOfRegistration);
         return this;
     }
 
     public MailBuilder WithOTPSubject(string otpSubject)
     {
-        _otpSubject = otpSubject;
+        _subject = otpSubject;
         return this;
     }
 
@@ -37,39 +78,14 @@ public sealed class MailBuilder: IMailBuilder
     {
         return new MailObject()
         {
-            BodyAmp = _otpMessage,
+            BodyAmp = _message,
             CharSet = "utf-8",
             From = _fromEmail,
             IsTransactional = true,
             To = _toEmail,
             Sender = _fromEmail,
-            Subject = _otpSubject
+            Subject = _subject
         };
-        
-        // return new MailRoot()
-        // {
-        //     Recipients = new Recipients()
-        //     {
-        //         To = new List<string>()
-        //         {
-        //             _toEmail
-        //         }
-        //     },
-        //     Content = new Content()
-        //     {
-        //         Body = new List<MailBodyBody>()
-        //         {
-        //             new MailBodyBody()
-        //             {
-        //                 Content = _otpMessage,
-        //                 Charset = "utf-8",
-        //                 ContentType = "HTML"
-        //             }
-        //         },
-        //         Subject = _otpSubject,
-        //         From = _fromEmail
-        //     }
-        // };
     }
 
     public static implicit operator MailObject(MailBuilder builder)

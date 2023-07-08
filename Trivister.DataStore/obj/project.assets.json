@@ -10581,8 +10581,17 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/vnu-viv-platform/vnu-platform-libraries/_packaging/vnu-platform-nuget/nuget/v3/index.json.",
+      "libraryId": "Newtonsoft.Json"
+    }
+  ]
 }

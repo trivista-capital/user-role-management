@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Trivister.ApplicationServices.Features.Role;
 using Trivister.Common.Model;
 using Trivister.Core.Entities;
 
@@ -23,6 +24,8 @@ public interface IIdentityService
 
         Task<bool> IsInRoleAsync(string userId, string role);
 
+        Task<ApplicationUser> GetUserInRoleAsync(Guid roleId);
+
         Task<bool> AuthorizeAsync(string userId, string policyName);
 
         Task<ErrorResult> DeleteUserAsync(string userId);
@@ -33,7 +36,10 @@ public interface IIdentityService
         Task<ErrorResult<bool>> ValidateUser(string username, string password);
         Task<ErrorResult<IdentityResult>> ResetPassword(ApplicationUser user, string token, string newPassword);
         Task<ApplicationRole> GetUsersRole(Guid userId);
+        Task<ErrorResult<(bool, string)>> RemoveUserFromRole(Guid userId);
         IQueryable<ApplicationRole> GetAllRoles();
+        Task<List<Guid>> GetUserNotInRoleAsync(string roleName);
+        Task<List<ApplicationUser>> GetUserByIdAsync(List<Guid> userIds);
         Task<ErrorResult<(Guid, bool)>> AddUserToRole(ApplicationUser mappedUser, string roleName);
         Task<ErrorResult<bool>> AddOrEditRole(Guid id, string name, string description);
         Task<List<string>> GetUserRolesAsync(ApplicationUser user);
@@ -48,5 +54,5 @@ public interface IIdentityService
         Task<ErrorResult> ChangePasswordAsync(ApplicationUser user, string newPassword);
         Task<ErrorResult<ApplicationUser>> ValidateApplicationUser(string username, string password);
         IQueryable<ApplicationUser> GetApplicationUsersIQueryable();
-        Task<ErrorResult<bool>> AssignPermissionsToRole(Guid roleId, List<int> permissionIds);
+        Task<ErrorResult<bool>> AssignPermissionsToRole(Guid roleId, List<PermissionsDto> permissions);
 }

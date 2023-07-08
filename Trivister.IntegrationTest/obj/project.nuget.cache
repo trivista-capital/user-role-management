@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "huDw3JiVtWvw4oZpS9I+4wBTiKLd2FHeR4VQ9gaTv2aPF+6tshxiINZodHto/59WH3V6/dn2JSoXt2GYRrM/vA==",
+  "dgSpecHash": "xAqG8L3Kotw2X8F11ezXXKCsj0lIsvQzxo6WNfeYpUBkmlKlbFNrd0I4k5jDNWUYxqc+Jifd5G3y+3lyHNXl2w==",
   "success": true,
   "projectFilePath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.IntegrationTest/Trivister.IntegrationTest.csproj",
   "expectedPackageFiles": [

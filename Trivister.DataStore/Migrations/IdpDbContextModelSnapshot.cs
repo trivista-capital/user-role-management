@@ -186,33 +186,33 @@ namespace Trivister.DataStore.Migrations
                         new
                         {
                             Id = new Guid("3e7d9440-48d7-4174-b9c5-0ea5be7d9e7d"),
-                            ConcurrencyStamp = "7118acb4-2cbc-499e-956b-5033cd77b58f",
-                            CreatedOn = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6750),
+                            ConcurrencyStamp = "79ac1549-2cc2-4c85-852d-14f9a7f09e44",
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(7440),
                             Description = "",
                             IsDeleted = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6750),
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(7440),
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = new Guid("0834d4fc-a976-4428-b6f8-d47b832fad1a"),
-                            ConcurrencyStamp = "9288783c-2de2-42ec-ab4b-410bbfcd5e68",
-                            CreatedOn = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6760),
+                            ConcurrencyStamp = "a326a8ba-08bc-458e-89b7-f8a6234878ed",
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(7450),
                             Description = "",
                             IsDeleted = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6760),
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(7450),
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
                             Id = new Guid("bcf0f8de-c8c3-44ee-9c67-df972d604cf2"),
-                            ConcurrencyStamp = "b9524bc4-7875-4970-9496-a3358082acbb",
-                            CreatedOn = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6770),
+                            ConcurrencyStamp = "93a5b098-1310-46ed-b69c-a5e1dcb72860",
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(7460),
                             Description = "",
                             IsDeleted = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6770),
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(7460),
                             Name = "Staff",
                             NormalizedName = "Staff"
                         });
@@ -333,20 +333,18 @@ namespace Trivister.DataStore.Migrations
                             Id = new Guid("363b37a0-c306-4472-a405-4b576334cca0"),
                             AccessFailedCount = 0,
                             Address = "No 1 Jango street, wild wild west, Texas",
-                            ConcurrencyStamp = "b1ec75fc-029a-4641-8acf-cf9e0ad26ea5",
-                            CreatedOn = new DateTime(2023, 6, 9, 11, 40, 32, 560, DateTimeKind.Utc).AddTicks(5150),
+                            ConcurrencyStamp = "6c232942-ed53-4280-a7ca-17fa864eda69",
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 169, DateTimeKind.Utc).AddTicks(3300),
                             Email = "femi.ibitolu@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "Babafemi",
                             IsDeleted = false,
                             IsDisabled = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 560, DateTimeKind.Utc).AddTicks(5150),
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 169, DateTimeKind.Utc).AddTicks(3300),
                             LastName = "Ibitolu",
                             LockoutEnabled = false,
-                            MiddleName = "Oluwaseyi",
                             NormalizedUserName = "FEMI.IBITOLU@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEP1ckUwspPDCnCqd/PYrmRe5dr/rgRqONqAffMuVWN3OVkPMHh5ZlAzyByO8eSqeeQ==",
-                            PhoneNumber = "08122310370",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFiyf2evei9JIUrUSbC6GyOfPZ4u7sZjg+KmNN9cXzN0idAxtdIiOEFezm4dXY+qcA==",
                             PhoneNumberConfirmed = false,
                             RoleId = 1,
                             TwoFactorEnabled = false,
@@ -444,29 +442,218 @@ namespace Trivister.DataStore.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6240),
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
                             Description = "Can add user to the system",
                             IsDeleted = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6240),
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
                             Name = "CanAddUser"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6240),
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
                             Description = "Can delete user",
                             IsDeleted = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6240),
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
                             Name = "CanDeleteUser"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedOn = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6240),
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
                             Description = "Can edit user",
                             IsDeleted = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(6240),
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
                             Name = "CanEditUser"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Description = "Can invite user",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Name = "CanInviteUser"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Description = "Can View user",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Name = "CanViewUsers"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Description = "Can View Loans",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Name = "CanViewLoans"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Description = "Can Approve Loans",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6800),
+                            Name = "CanApproveLoans"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can Reject Loans",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanRejectLoans"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can WriteOff Loans",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanWriteOffLoans"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can View Reports",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanViewReports"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can Download Reports",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanDownloadReports"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can Create Role",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanCreateRole"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can Update Role",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanUpdateRole"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can Add permissions to Role",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanAddPermissionsToRole"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can View Roles",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanViewRoles"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Description = "Can View Tickets",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6810),
+                            Name = "CanViewTickets"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can View Tickets",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanViewTickets"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can Open/Close Tickets",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanOpenOrCloseTicket"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can Respond to Tickets",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanRespondToTicket"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can View Configurations",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanViewConfigurations"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can Update Maker Checker Configurations",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanUpdateMakerCheckerConfiguration"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can Create Loan Configuration",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanCreateLoanConfiguration"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can Update Loan Configuration",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanUpdateLoanConfiguration"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CreatedOn = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Description = "Can Delete Loan Configuration",
+                            IsDeleted = false,
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 174, DateTimeKind.Utc).AddTicks(6820),
+                            Name = "CanDeleteLoanConfiguration"
                         });
                 });
 
@@ -526,7 +713,7 @@ namespace Trivister.DataStore.Migrations
                             UserId = new Guid("363b37a0-c306-4472-a405-4b576334cca0"),
                             RoleId = new Guid("3e7d9440-48d7-4174-b9c5-0ea5be7d9e7d"),
                             IsDeleted = false,
-                            LastModified = new DateTime(2023, 6, 9, 11, 40, 32, 565, DateTimeKind.Utc).AddTicks(8880)
+                            LastModified = new DateTime(2023, 6, 27, 7, 36, 15, 175, DateTimeKind.Utc).AddTicks(70)
                         });
                 });
 

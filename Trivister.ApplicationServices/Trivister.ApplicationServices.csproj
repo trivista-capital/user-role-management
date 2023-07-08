@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common\Helper" />
       <Folder Include="Features\User\EventHander" />
       <Folder Include="Infrastructure" />
     </ItemGroup>

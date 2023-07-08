@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Trivister.ApplicationServices.Abstractions;
 using Trivister.ApplicationServices.Common.Options;
+using Trivister.ApplicationServices.Features.Account.EventHandlers;
 using Trivister.Common.Model;
 using Trivister.Common.Options;
 using Trivister.Core.Entities;
@@ -45,10 +46,12 @@ public class GeneratePasswordResetTokenCommandHandler : IRequestHandler<Generate
     private readonly IConfiguration _configuration;
     private readonly ILogger<GeneratePasswordResetTokenCommandHandler> _logger;
     private readonly MailOptions _mailOptions;
+    private readonly IPublisher _publisher;
     public GeneratePasswordResetTokenCommandHandler(IIdentityService identityService, IPublisher publisher, IConfiguration configuration, 
         ILogger<GeneratePasswordResetTokenCommandHandler> logger, IOptions<MailOptions> mailOptions)
     {
         _identityService = identityService;
+        _publisher = publisher;
         _configuration = configuration;
         _logger = logger;
         _mailOptions = mailOptions.Value;
@@ -56,7 +59,7 @@ public class GeneratePasswordResetTokenCommandHandler : IRequestHandler<Generate
     
     public async Task<ErrorResult> Handle(GeneratePasswordResetTokenCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Entered the GeneratePasswordResetTokenCommandHandler");
+            _logger.LogInformation("Entered the GeneratePasswordResetTokenCommandHandler");
             var user = await this._identityService.GetUserByEmail(request.Email);
             if (user?.Value == null)
             {
@@ -73,23 +76,12 @@ public class GeneratePasswordResetTokenCommandHandler : IRequestHandler<Generate
             var baseConfirmationLink = _configuration.GetSection("EmailResetBaseUrl").Value;
             var confirmationLink = $"{baseConfirmationLink}?email={request.Email}&token={link.Value}";
             _logger.LogInformation("About publishing the SendEmailMessage event");
-            
-            // await _publisher.Publish(new SendEmailMessage()
-            // {
-            //     To = new List<string>() { mailObject.To },
-            //     Subject = mailObject.Subject,
-            //     Bcc = new List<string>(),
-            //     Cc = new List<string>(),
-            //     Attachments = new List<string>(),
-            //     EmailProviderName = "",
-            //     EmailTemplateName = "ForgotPasswordTemplate",
-            //     ApplicationName = "Authentication service",
-            //     ReplaceableParameters = new List<string>()
-            //     {
-            //         request.Email,
-            //         confirmationLink
-            //     }
-            // });
+
+            _publisher.Publish(new GeneratePasswordResetTokenEvent()
+            { 
+                Email = request.Email,
+                ConfirmationLink = confirmationLink
+            });
             _logger.LogInformation("Published the SendEmailMessage event");
             return ErrorResult.Ok();
     }

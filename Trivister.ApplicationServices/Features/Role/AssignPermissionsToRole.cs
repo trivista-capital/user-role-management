@@ -25,7 +25,9 @@ public static class AssignPermissionsToRoleController
   }
 }
 
-public sealed record RolePermissionsDto(Guid RoleId, List<int> PermissionIds);
+public sealed record RolePermissionsDto(Guid RoleId, List<PermissionsDto> Permissions);
+
+public sealed record PermissionsDto(int Id, string  Name);
 
 public sealed record AssignPermissionsToRoleCommand(RolePermissionsDto RolePermissions): IRequest<ErrorResult<bool>>;
 
@@ -39,10 +41,10 @@ public sealed class AssignPermissionsToRoleCommandHandler : IRequestHandler<Assi
   
   public async Task<ErrorResult<bool>> Handle(AssignPermissionsToRoleCommand request, CancellationToken cancellationToken)
   {
-    if(!request.RolePermissions.PermissionIds.Any())
+    if(!request.RolePermissions.Permissions.Any())
       throw new BadRequestException("No permission was selected. Please select at least one and try again");
     var result = await _identityService.AssignPermissionsToRole(request.RolePermissions.RoleId,
-        request.RolePermissions.PermissionIds);
+        request.RolePermissions.Permissions);
     if (!result.IsSuccess)
       throw new BadRequestException(result.Error);
     return result;

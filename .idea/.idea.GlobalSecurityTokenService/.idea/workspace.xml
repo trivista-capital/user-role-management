@@ -5,10 +5,202 @@
     <projectFile profileName="API">API/API.csproj</projectFile>
     <projectFile profileName="STS.Functions">STS.Functions/STS.Functions.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="46c94736-ad0e-41a5-a22f-28be986c1d6c" name="Changes" comment="Pushed api file">
+    <list default="true" id="46c94736-ad0e-41a5-a22f-28be986c1d6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Common/Helper/EmailTemplateHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Common/Helper/StringHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/EventHandlers/AdminRegisteredEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/EventHandlers/GeneratePasswordResetTokenEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/EventHandlers/NewCustomerRegisteredEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/EventHandlers/PasswordSuccessfullyResetTokenEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/EventHandlers/RegisteredSuccessfullyEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/WelcomeEmailTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trivister.DataStore/EmailConfirmationTokenProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/dataSources/b4ffd39c-ec05-43f2-9c89-66cabab9927d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/dataSources/b4ffd39c-ec05-43f2-9c89-66cabab9927d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/dataSources/dba3de4f-f528-4a54-8167-d7fb86b51a90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/dataSources/dba3de4f-f528-4a54-8167-d7fb86b51a90.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalSecurityTokenService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/bin/Debug/net6.0/PolicyManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/bin/Debug/net6.0/PolicyManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/bin/Debug/net6.0/PolicyManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/bin/Debug/net6.0/PolicyManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/Debug/net6.0/PolicyManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/PolicyManagement.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/PolicyManagement.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/PolicyManagement.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/PolicyManagement.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PolicyManagement/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PolicyManagement/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trivister.API" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.API" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Abstractions/IIdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Abstractions/IIdentityService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Abstractions/IMailManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Abstractions/IMailManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Common/Options/MailOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Common/Options/MailOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/EventHandlers/UserRegisteredEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/EventHandlers/UserRegisteredEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ForgotPassword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ForgotPassword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GeneratePasswordResetToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GeneratePasswordResetToken.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ResendEmailConfirmationLink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ResendEmailConfirmationLink.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/AssignPermissionsToRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/AssignPermissionsToRole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/GetRoles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/GetRoles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/GetUsers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/GetUsers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/Trivister.ApplicationServices.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/Trivister.ApplicationServices.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.ApplicationServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.ApplicationServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/bin/Debug/net6.0/Trivister.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/Trivister.ApplicationServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/ref/Trivister.ApplicationServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/ref/Trivister.ApplicationServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/refint/Trivister.ApplicationServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Debug/net6.0/refint/Trivister.ApplicationServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Trivister.ApplicationServices.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Trivister.ApplicationServices.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Trivister.ApplicationServices.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/Trivister.ApplicationServices.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.ApplicationServices/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/bin/Debug/net6.0/Trivister.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/Debug/net6.0/Trivister.Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/Trivister.Common.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/Trivister.Common.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/Trivister.Common.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/Trivister.Common.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Common/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Common/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/bin/Debug/net6.0/Trivister.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/bin/Debug/net6.0/Trivister.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/bin/Debug/net6.0/Trivister.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/bin/Debug/net6.0/Trivister.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/Debug/net6.0/Trivister.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/Trivister.Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/Trivister.Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/Trivister.Core.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/Trivister.Core.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Core/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/DbConfigurations/PermissionConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/DbConfigurations/PermissionConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/Extensions/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/Extensions/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/Migrations/IdpDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/Migrations/IdpDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.ApplicationServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.ApplicationServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.DataStore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.DataStore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.DataStore.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/bin/Debug/net6.0/Trivister.DataStore.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/Trivister.DataStore.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/ref/Trivister.DataStore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/ref/Trivister.DataStore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/refint/Trivister.DataStore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Debug/net6.0/refint/Trivister.DataStore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Trivister.DataStore.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Trivister.DataStore.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/Trivister.DataStore.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/Trivister.DataStore.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.DataStore/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.DataStore/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/Config.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/Pages/Account/Login/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/Pages/Account/Login/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.ApplicationServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.ApplicationServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.DataStore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.DataStore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.DataStore.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.DataStore.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.IDP.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/bin/Debug/net6.0/Trivister.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/Trivister.IDP.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/apphost" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/apphost" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/ref/Trivister.IDP.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/ref/Trivister.IDP.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/refint/Trivister.IDP.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Debug/net6.0/refint/Trivister.IDP.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Trivister.IDP.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Trivister.IDP.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/Trivister.IDP.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/Trivister.IDP.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IDP/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IDP/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/Config.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ProfileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ProfileService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ResourceOwnerPasswordValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ResourceOwnerPasswordValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/IMailBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/IMailBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.ApplicationServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.ApplicationServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.ApplicationServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/bin/Debug/net6.0/Trivister.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/Trivister.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/ref/Trivister.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/ref/Trivister.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/refint/Trivister.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Debug/net6.0/refint/Trivister.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Trivister.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Trivister.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Trivister.Infrastructure.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/Trivister.Infrastructure.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/bin/Debug/net6.0/Trivister.IntegrationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/bin/Debug/net6.0/Trivister.IntegrationTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/bin/Debug/net6.0/Trivister.IntegrationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/bin/Debug/net6.0/Trivister.IntegrationTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Debug/net6.0/Trivister.IntegrationTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Trivister.IntegrationTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Trivister.IntegrationTest.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Trivister.IntegrationTest.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/Trivister.IntegrationTest.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.IntegrationTest/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/bin/Debug/net6.0/Trivister.UnitTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/bin/Debug/net6.0/Trivister.UnitTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/bin/Debug/net6.0/Trivister.UnitTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/bin/Debug/net6.0/Trivister.UnitTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/Debug/net6.0/Trivister.UnitTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/Trivister.UnitTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/Trivister.UnitTest.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/Trivister.UnitTest.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/Trivister.UnitTest.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trivister.UnitTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Trivister.UnitTest/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,34 +213,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ab6d0d38-339d-4991-a3ca-985f5a75ab5f" />
+        <option name="url" value="https://github.com/trivista-capital/user-role-management.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Documents/Projects/STS/Trivister.IDP/HostingExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/Projects/STS/Trivister.IDP/Pages/Account/Login/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/Projects/STS/Trivister.IDP/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Distribution/PublicationsTracker/App/Data/PublicationsContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab4c541a77fe4d60868065281c6150239ea200/15/51ab3fb6/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/7ca8898b690a4181a32a9cf767cedb1ea9c28/64/ae80df72/Newtonsoft.Json.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/11c9b16b4348b7bac79b14015a5b4b74b6df3824f1ae1c16847c8d9b49c824/AuthorizationEndpointConventionBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/17b1c750bba840fd199b9826e62afbab721a8d5e230c6fc8ca782547e1aa4d/AuthorizationAppBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2ae7ceca6fa89ee8a487cb7778b12ef74b78ac54481bfa677e7d7cb55b68b7/IdentityUserRole.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2f3e6bfc214439fa30f166129cdd87564821bb95bd98bf795db8c3e13848093/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/44cad551704bc7dae78cc7717b8b9f9313582aa8e67a6585a69de0cc33b4b8/IServiceCollection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5162dcef9ff38f5edc8c81f80f94afbc8848d6536cb6cd8a9f0db26b3a7b1/OptionsServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/53fde159ba8211bfa732c66683f6d3cd7af7b9ff56a3a1dc1dbe1cee597fe/CallSiteRuntimeResolver.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5e36f79053446033ddbc7cc8397a3d0627114f46f804559a98a094977b488d/RequestExceptionProcessorBehavior.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5e71e1a0d437b4746dcd1fd0f55fc64b13f4f7fb25d8b17c3e9eeae62ca3431/AuthenticationServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/626f4c8c106f5d1bf83dad20893a9d8a5e297b6f591814d96ec8526f036fc/TokenManagementServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c85a0de735388c4a3e1379ccf7bbfe6c87438fff4aa9c4fc58b6fc4a6f619/RoleManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fdd9ffe8410d40eca5e4f270d09303f99ea000/98/fc7ba571/Monitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/186fb32f54d3c4c530906d69ce9f11ebf3d3c46d5e3d4c51e12a77d423bb6f/DefaultClaimsService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/90f759db8113d19fb412ddf678b2a5d6d243ed115611175dadd1bcb89eee4f/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/98a4eee1769c472aa15a74bb1532e1b83e32cdf7835d4c77d08352d308da9/TokenRequestValidator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/af97b4bfce2f9cc893ec6c9d32fb656f1686f9991ae97a6b99b683d06e4775b3/HttpServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b4cabaa7b1e743f1f74dfbbe7793ee82763ce08b706c84822652717efafb2ae/ClaimsIdentity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de271ccf3ff37986b6d3371645fe3b139cc5e384e759f686d8b2e87c734b0/EntityFrameworkQueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fec57f855cb7733bbcb76be494767a15ea6de55bb3c3dc794885dea3de247/RoleStore.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ffcaccdb699eb1d5444850edb7642342f5bde7f870a89d68e13069a77aabac94/IdentityRole.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Trivister.ApplicationServices/Abstractions/IGlobalTSDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/user/Projects/GlobalSecurityTokenService/Trivister.Core/Entities/ApplicationUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/user/Projects/GlobalSecurityTokenService/Trivister.ApplicationServices/Features/User/EditUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Trivister.DataStore/Context/IDPDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/user/Projects/GlobalSecurityTokenService/Trivister.DataStore/DbConfigurations/PermissionConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/user/Projects/GlobalSecurityTokenService/Trivister.DataStore/Extensions/DependencyInjection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/user/Projects/GlobalSecurityTokenService/Trivister.Infrastructure/IdentityConfig/Config.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="minikube" />
@@ -58,7 +249,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2NeGImQjTIKden5So365L1yPwgD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -72,8 +263,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4045699&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;integrate-with-elastic-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -81,8 +277,8 @@
       &quot;sqlserver&quot;
     ],
     &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/user/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/user/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/user/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/user/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
       &quot;/Users/user/.local/share/Symbols/src&quot;
     ]
   }
@@ -100,7 +296,7 @@
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=None)))))))))))))))))))))))))))))))))))))))))))))))))))))" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=None))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))" />
       <option name="PROJECT_TFM" value="" />
       <option name="FUNCTION_NAMES" value="" />
       <method v="2">
@@ -217,7 +413,21 @@
       <workItem from="1686439555675" duration="4478000" />
       <workItem from="1686489859122" duration="1491000" />
       <workItem from="1686491361789" duration="10716000" />
-      <workItem from="1686551289647" duration="8751000" />
+      <workItem from="1686551289647" duration="11439000" />
+      <workItem from="1686690128203" duration="122000" />
+      <workItem from="1686900619073" duration="11260000" />
+      <workItem from="1687031740397" duration="3237000" />
+      <workItem from="1687042335053" duration="51000" />
+      <workItem from="1687042453421" duration="1904000" />
+      <workItem from="1687204453657" duration="2770000" />
+      <workItem from="1687444451674" duration="605000" />
+      <workItem from="1687649092078" duration="3385000" />
+      <workItem from="1687652598435" duration="2870000" />
+      <workItem from="1687701056610" duration="11440000" />
+      <workItem from="1687752945212" duration="600000" />
+      <workItem from="1687770292673" duration="25723000" />
+      <workItem from="1688622913975" duration="8612000" />
+      <workItem from="1688710756913" duration="12081000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1683839320209</created>
@@ -240,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686603886245</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added api folder">
+      <created>1686679108756</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686679108756</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +481,8 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="Added code to integrate email" />
     <MESSAGE value="Pushed api file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pushed api file" />
+    <MESSAGE value="Added api folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added api folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -323,42 +541,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GeneratePasswordResetToken.cs</url>
-          <line>57</line>
+          <line>60</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GeneratePasswordResetToken.cs" initialLine="40" containingFunctionPresentation="method 'Handle'">
             <startOffsets>
-              <option value="2344" />
+              <option value="2488" />
             </startOffsets>
             <endOffsets>
-              <option value="2345" />
+              <option value="2489" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GeneratePasswordResetToken.cs</url>
-          <line>22</line>
+          <line>23</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GeneratePasswordResetToken.cs" initialLine="20" containingFunctionPresentation="lambda expression inside method 'GeneratePasswordResetTokenEndpoint'">
             <startOffsets>
-              <option value="813" />
+              <option value="881" />
             </startOffsets>
             <endOffsets>
-              <option value="814" />
+              <option value="882" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/CreateRole.cs</url>
-          <line>63</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/CreateRole.cs" initialLine="27" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="2581" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2582" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ChangePassword.cs</url>
@@ -375,29 +580,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs</url>
-          <line>37</line>
+          <line>38</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs" initialLine="36" containingFunctionPresentation="method 'Handle'">
             <startOffsets>
-              <option value="1493" />
+              <option value="1526" />
             </startOffsets>
             <endOffsets>
-              <option value="1494" />
+              <option value="1527" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs</url>
-          <line>14</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs" initialLine="14" containingFunctionPresentation="lambda expression inside method 'EditUserEndpoint'">
-            <startOffsets>
-              <option value="481" />
-            </startOffsets>
-            <endOffsets>
-              <option value="482" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/DeleteUser.cs</url>
@@ -453,26 +645,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
-          <line>408</line>
+          <line>455</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="369" containingFunctionPresentation="method 'AssignPermisionsToRole'">
             <startOffsets>
-              <option value="19904" />
+              <option value="22231" />
             </startOffsets>
             <endOffsets>
-              <option value="19905" />
+              <option value="22232" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/AssignPermissionsToRole.cs</url>
-          <line>40</line>
+          <line>42</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/AssignPermissionsToRole.cs" initialLine="41" containingFunctionPresentation="method 'Handle'">
             <startOffsets>
-              <option value="1644" />
+              <option value="1713" />
             </startOffsets>
             <endOffsets>
-              <option value="1645" />
+              <option value="1714" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="43" />
@@ -492,13 +684,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
-          <line>321</line>
+          <line>315</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="314" containingFunctionPresentation="method 'AddOrEditRole'">
             <startOffsets>
-              <option value="15980" />
+              <option value="16047" />
             </startOffsets>
             <endOffsets>
-              <option value="15981" />
+              <option value="16048" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="88" />
@@ -506,54 +698,14 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c85a0de735388c4a3e1379ccf7bbfe6c87438fff4aa9c4fc58b6fc4a6f619/RoleManager.cs</url>
           <line>448</line>
-          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c85a0de735388c4a3e1379ccf7bbfe6c87438fff4aa9c4fc58b6fc4a6f619/RoleManager.cs" initialLine="448" containingFunctionPresentation="method 'UpdateRoleAsync'">
-            <startOffsets>
-              <option value="18033" />
-            </startOffsets>
-            <endOffsets>
-              <option value="18034" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c85a0de735388c4a3e1379ccf7bbfe6c87438fff4aa9c4fc58b6fc4a6f619/RoleManager.cs" initialLine="448" containingFunctionPresentation="method 'UpdateRoleAsync'" />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c85a0de735388c4a3e1379ccf7bbfe6c87438fff4aa9c4fc58b6fc4a6f619/RoleManager.cs</url>
           <line>193</line>
-          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c85a0de735388c4a3e1379ccf7bbfe6c87438fff4aa9c4fc58b6fc4a6f619/RoleManager.cs" initialLine="193" containingFunctionPresentation="method 'UpdateAsync'">
-            <startOffsets>
-              <option value="7853" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7854" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c85a0de735388c4a3e1379ccf7bbfe6c87438fff4aa9c4fc58b6fc4a6f619/RoleManager.cs" initialLine="193" containingFunctionPresentation="method 'UpdateAsync'" />
           <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/Http/CustomerClient.cs</url>
-          <line>41</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/Http/CustomerClient.cs" initialLine="40" containingFunctionPresentation="method 'PublishRole'">
-            <startOffsets>
-              <option value="1472" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1473" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/GetUsers.cs</url>
-          <line>56</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/GetUsers.cs" initialLine="56" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="2091" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2092" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/OTP Management/ValidateOTP.cs</url>
@@ -569,84 +721,6 @@
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs</url>
-          <line>104</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs" initialLine="18" containingFunctionPresentation="method 'SendEmail'">
-            <startOffsets>
-              <option value="4435" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4436" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs</url>
-          <line>95</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs" initialLine="92" containingFunctionPresentation="method 'SendEmail'">
-            <startOffsets>
-              <option value="4090" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4150" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs</url>
-          <line>61</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs" initialLine="58" containingFunctionPresentation="method 'SendEmail'">
-            <startOffsets>
-              <option value="2867" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2868" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="128" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GenerateToken.cs</url>
-          <line>49</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GenerateToken.cs" initialLine="49" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="2028" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2029" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ProfileService.cs</url>
-          <line>26</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ProfileService.cs" initialLine="25" containingFunctionPresentation="method 'GetProfileDataAsync'">
-            <startOffsets>
-              <option value="920" />
-            </startOffsets>
-            <endOffsets>
-              <option value="921" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ResourceOwnerPasswordValidator.cs</url>
-          <line>25</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ResourceOwnerPasswordValidator.cs" initialLine="25" containingFunctionPresentation="method 'ValidateAsync'">
-            <startOffsets>
-              <option value="912" />
-            </startOffsets>
-            <endOffsets>
-              <option value="913" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.Infrastructure/Http/GetTokenClient.cs</url>
           <line>22</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/Http/GetTokenClient.cs" initialLine="22" containingFunctionPresentation="method 'GetToken'">
@@ -658,32 +732,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs</url>
-          <line>62</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs" initialLine="62" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="2776" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2777" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs</url>
-          <line>17</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs" initialLine="17" containingFunctionPresentation="method 'RegisterUserEndpoint'">
-            <startOffsets>
-              <option value="586" />
-            </startOffsets>
-            <endOffsets>
-              <option value="587" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="134" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/GetRoles.cs</url>
@@ -699,95 +747,251 @@
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/CreateRole.cs</url>
-          <line>76</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/CreateRole.cs" initialLine="68" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="3213" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3214" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/Http/CustomerClient.cs</url>
-          <line>47</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/Http/CustomerClient.cs" initialLine="46" containingFunctionPresentation="method 'PublishRole'">
-            <startOffsets>
-              <option value="1756" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1814" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/Http/CustomerClient.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/Http/CustomerClient.cs" initialLine="57" containingFunctionPresentation="method 'PublishRole'">
-            <startOffsets>
-              <option value="2400" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2401" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="143" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/EventHandlers/RoleCreatedEvent.cs</url>
-          <line>20</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/EventHandlers/RoleCreatedEvent.cs" initialLine="20" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="765" />
-            </startOffsets>
-            <endOffsets>
-              <option value="766" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/CreateRole.cs</url>
-          <line>72</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/CreateRole.cs" initialLine="72" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="3004" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3113" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/EventHandlers/RoleCreatedEvent.cs</url>
-          <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/EventHandlers/RoleCreatedEvent.cs" initialLine="29" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="1140" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1141" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="146" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/GetRoles.cs</url>
           <line>103</line>
           <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Role/GetRoles.cs" initialLine="104" containingFunctionPresentation="method 'Handle'">
             <startOffsets>
-              <option value="3667" />
+              <option value="3719" />
             </startOffsets>
             <endOffsets>
-              <option value="3784" />
+              <option value="3836" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
+          <line>248</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="254" containingFunctionPresentation="method 'ResetPassword'">
+            <startOffsets>
+              <option value="12265" />
+            </startOffsets>
+            <endOffsets>
+              <option value="12266" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ForgotPassword.cs</url>
+          <line>53</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ForgotPassword.cs" initialLine="50" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="2504" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2505" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ChangePassword.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ChangePassword.cs" initialLine="64" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="2609" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2610" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
+          <line>177</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="181" containingFunctionPresentation="method 'ChangePasswordAsync'">
+            <startOffsets>
+              <option value="8906" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8907" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ResendEmailConfirmationLink.cs</url>
+          <line>63</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/ResendEmailConfirmationLink.cs" initialLine="62" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="2774" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2775" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/MailService/MailManager.cs" initialLine="37" containingFunctionPresentation="method 'BuildMessage'">
+            <startOffsets>
+              <option value="1694" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1695" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.IDP/Pages/Account/Login/Index.cshtml.cs</url>
+          <line>61</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.IDP/Pages/Account/Login/Index.cshtml.cs" initialLine="61" containingFunctionPresentation="Method 'OnPost'">
+            <startOffsets>
+              <option value="2248" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2249" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ProfileService.cs</url>
+          <line>57</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.Infrastructure/IdentityConfig/ProfileService.cs" initialLine="68" containingFunctionPresentation="Method 'GetProfileDataAsync'">
+            <startOffsets>
+              <option value="2441" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2471" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GenerateToken.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/GenerateToken.cs" initialLine="49" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="2028" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2029" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
+          <line>284</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="283" containingFunctionPresentation="Method 'AddUserToRole'">
+            <startOffsets>
+              <option value="14292" />
+            </startOffsets>
+            <endOffsets>
+              <option value="14293" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/GetUsers.cs</url>
+          <line>57</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/GetUsers.cs" initialLine="57" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="2101" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2172" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
+          <line>337</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="336" containingFunctionPresentation="Method 'GetUserNotInRoleAsync'">
+            <startOffsets>
+              <option value="17065" />
+            </startOffsets>
+            <endOffsets>
+              <option value="17170" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
+          <line>389</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="373" containingFunctionPresentation="Method 'RemoveUserFromRole'">
+            <startOffsets>
+              <option value="19029" />
+            </startOffsets>
+            <endOffsets>
+              <option value="19030" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
+          <line>448</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="429" containingFunctionPresentation="Method 'UpdateUserAsync'">
+            <startOffsets>
+              <option value="21862" />
+            </startOffsets>
+            <endOffsets>
+              <option value="21863" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs</url>
+          <line>42</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs" initialLine="42" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1684" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1755" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs</url>
+          <line>43</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/User/EditUser.cs" initialLine="43" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1764" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1803" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs</url>
+          <line>471</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.DataStore/Repositories/IdentityService.cs" initialLine="456" containingFunctionPresentation="Method 'AssignPermissionsToRole'">
+            <startOffsets>
+              <option value="23063" />
+            </startOffsets>
+            <endOffsets>
+              <option value="23201" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs</url>
+          <line>66</line>
+          <properties documentPath="$PROJECT_DIR$/Trivister.ApplicationServices/Features/Account/RegisterUser.cs" initialLine="65" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="2923" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2972" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="191" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

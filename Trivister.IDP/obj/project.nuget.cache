@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VOKnrQNg0FLenb5nmTBqt3XU2t6iQni7wycXEb2HA6KQrsfzKCuN7da6clEFdx26TX4c1fuFHAtcyAn37hDoFw==",
+  "dgSpecHash": "1RPbqhqO2NCMGdEtYQarjYAtRx4detMp9J5EbCDvhG2mWKPbAVRC2T4ixQRUF8RmhmE40eRjJMZ1OjEJ76B1qQ==",
   "success": true,
   "projectFilePath": "/Users/user/Projects/GlobalSecurityTokenService/Trivister.IDP/Trivister.IDP.csproj",
   "expectedPackageFiles": [
@@ -237,5 +237,13 @@
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.xml.xpath/4.3.0/system.xml.xpath.4.3.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.xml.xpath.xdocument/4.3.0/system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/vnu-viv-platform/vnu-platform-libraries/_packaging/vnu-platform-nuget/nuget/v3/index.json.",
+      "libraryId": "Newtonsoft.Json"
+    }
+  ]
 }

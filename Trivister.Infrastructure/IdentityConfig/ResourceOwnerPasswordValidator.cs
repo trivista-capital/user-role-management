@@ -49,6 +49,20 @@ public class ResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
                     context.Request.ClientClaims.Add(claim);
                 }   
             }
+            else
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(JwtClaimTypes.Subject, user.Id.ToString()),
+                    new Claim(JwtClaimTypes.Email, user.Email),
+                    new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
+                    new Claim(ClaimTypes.Role, role?.Name)
+                };
+                foreach (var claim in claims)
+                {
+                    context.Request.ClientClaims.Add(claim);
+                }      
+            }
             context.Result = new GrantValidationResult(user.Id.ToString(), "password", null, "local", null);
             //return Task.FromResult(context.Result);
         }

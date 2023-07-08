@@ -55,8 +55,10 @@ public sealed class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, ErrorR
     
     public async Task<ErrorResult<List<GetUsersDto>>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
     {
-        var usersFromDb = _identityService.GetApplicationUsersIQueryable();
-        var users = usersFromDb.Select(GetUsersDto.Projection).ToList();
+        var userIds = await _identityService.GetUserNotInRoleAsync("Customer");
+        var usersFromDb = await _identityService.GetUserByIdAsync(userIds);
+        var users = usersFromDb.Select(x => new GetUsersDto(x.Id, x.FirstName, x.MiddleName, x.LastName, x.Address,
+                                    x.RoleId, x.Email, "")).ToList();
         for (int i = 0; i< users.Count; i ++)
         {
             var role = await _identityService.GetUsersRole(users[i].Id);

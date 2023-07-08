@@ -88,7 +88,7 @@ public sealed class GetRolesByIdQueryHandler : IRequestHandler<GetRolesByIdQuery
     public async Task<ErrorResult<List<GetRolesDto>>> Handle(GetRolesByIdQuery request, CancellationToken cancellationToken)
     {
         var getRolesDtoList = new List<GetRolesDto>();
-        var queryAbleRoles = _identityService.GetAllRoles();
+        var queryAbleRoles = _identityService.GetAllRoles().Where(x=>x.Name != "Customer" && x.Name != "Staff");
         var applicationRoles = queryAbleRoles.ToList();
         if (!applicationRoles.Any())
             throw new NotFoundException("No role exist in the application");

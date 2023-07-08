@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Trivister.ApplicationServices.Abstractions;
 using Trivister.ApplicationServices.Exceptions;
+using Trivister.ApplicationServices.Features.Role;
 using Trivister.Common.Extensions;
 using Trivister.Common.Model;
 using Trivister.Core.Entities;
@@ -41,7 +42,6 @@ public class IdentityService: IIdentityService
             return user!.UserName;
         }
         
-
         public async Task<ErrorResult<bool>> ValidateUser(string username, string password)
         {
             var user = await _userManager.FindByNameAsync(username);
@@ -117,7 +117,6 @@ public class IdentityService: IIdentityService
             return ErrorResult.Fail($"Unable to verify email {email}");
         }
         
-
         public async Task<(ErrorResult Result, string UserId)> CreateUserAsync(string userName, string password)
         {
             // user.TwoFactorEnabled = true;
@@ -144,7 +143,6 @@ public class IdentityService: IIdentityService
             return (ErrorResult.Fail(error), user);
         }
         
-
         public async Task<ErrorResult> CreateUserAsync(string password, ApplicationUser user)
         {
             // user.TwoFactorEnabled = true; //for now
@@ -156,8 +154,7 @@ public class IdentityService: IIdentityService
             var result = await _userManager.CreateAsync(user, password);
             return result.Succeeded ? ErrorResult.Ok() : ErrorResult.Fail(result.Errors.FirstOrDefault()?.Description!);
         }
-        
-        
+
         public async Task<(ErrorResult Result, IdentityResult result, string UserId)> CreateUserAsync(ApplicationUser user, string password)
         {
             // user.TwoFactorEnabled = true;
@@ -166,8 +163,7 @@ public class IdentityService: IIdentityService
             var result = await _userManager.CreateAsync(user, password);
             return result.Succeeded ? (ErrorResult.Ok(), result, user.Id.ToString()) : (ErrorResult.Fail("Unable to create user"), result, user.Id.ToString());
         }
-        
-        
+
         public async Task<(ErrorResult Result, IdentityResult result, string UserId)> CreateUserAsync(ApplicationUser user)
         {
             // user.TwoFactorEnabled = true;
@@ -186,13 +182,11 @@ public class IdentityService: IIdentityService
             return result.Succeeded ? ErrorResult.Ok("Password changed successfully") : ErrorResult.Fail(result.Errors.FirstOrDefault()?.Description!);
         }
         
-        
         public async Task<bool> IsInRoleAsync(string userId, string role)
         {
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id.ToString() == userId);
             return await _userManager.IsInRoleAsync(user!, role);
         }
-        
         
         public async Task<bool> AuthorizeAsync(string userId, string policyName)
         {
@@ -257,7 +251,8 @@ public class IdentityService: IIdentityService
             _logger.LogInformation("Password reset link after decoding by browser is: {@LINK} ", token);
             var result = await _userManager.ResetPasswordAsync(user, token, newPassword);
             _logger.LogInformation("Result of password reset is: {@RESULT} ", result.Succeeded);
-            if (!result.Succeeded) return ErrorResult.Fail<IdentityResult>("Unable to reset password.");
+            var error = result.Errors.Select(x => x.Description).ToArray();
+            if (!result.Succeeded) return ErrorResult.Fail<IdentityResult>(string.Join(",", error));
             return ErrorResult.Ok(result);
         }
 
@@ -269,7 +264,6 @@ public class IdentityService: IIdentityService
             return ErrorResult.Ok(result);
         }
         
-
         public async Task<ErrorResult<bool>> RemoveUserFromRole(ApplicationUser applicationUser, string roleName)
         {
             _logger.LogInformation($"Removing User with email: {applicationUser.Email} from Role {roleName}");
@@ -335,6 +329,48 @@ public class IdentityService: IIdentityService
             return roles.ToList();
         }
         
+        public async Task<List<Guid>> GetUserNotInRoleAsync(string roleName)
+        {
+            try
+            {
+                var roles = _roleManager.Roles;
+                var role = await roles.Where(x => x.Name == roleName).Select(x=>x).FirstOrDefaultAsync();
+                var userIds = await _context?.UsersRole?.Where(x=>x.RoleId != role.Id).Select(x=>x.UserId).ToListAsync();
+                return userIds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }   
+        }
+        
+        public async Task<ApplicationUser> GetUserInRoleAsync(Guid roleId)
+        {
+            try
+            {
+                var userId = await _context?.UsersRole?.Where(x=>x.RoleId != roleId).Select(x=>x.UserId).FirstOrDefaultAsync();
+                var applicationUser = await _userManager.FindByIdAsync(userId.ToString());
+                return applicationUser;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }   
+        }
+        
+        public async Task<List<ApplicationUser>> GetUserByIdAsync(List<Guid> userIds)
+        {
+            var users = new List<ApplicationUser>();
+            foreach (var userId in userIds)
+            {
+                var user = await _userManager.FindByIdAsync(userId.ToString());
+                users.Add(user);
+            }
+            return users;
+        }
+        
         public async Task<ApplicationRole> GetRoleById(Guid roleId)
         {
             var role = await _roleManager.Roles.Where(x=>x.Id == roleId).FirstOrDefaultAsync();
@@ -350,6 +386,18 @@ public class IdentityService: IIdentityService
             return role;
         }
         
+        public async Task<ErrorResult<(bool, string)>> RemoveUserFromRole(Guid userId)
+        {
+            var predicate = UserPredicate.GetUserById(userId);
+            var userRole = await _context?.UsersRole?.Where(predicate).FirstOrDefaultAsync();
+            if (userRole == null) return ErrorResult.Fail<(bool, string)>("Either user is removed from role or user does not belong to role.");
+            _context.UsersRole.Remove(userRole);
+            var isDeleted = await _context.SaveChangesAsync(new CancellationToken());
+            if (isDeleted > 0)
+                return ErrorResult.Ok<(bool, string)>((true, "User removed successfully"));
+            return ErrorResult.Fail<(bool, string)>("Unable to remove user from role");;
+        }
+        
         public IQueryable<ApplicationRole> GetAllRoles()
         {
             var roles = _roleManager.Roles;
@@ -360,7 +408,6 @@ public class IdentityService: IIdentityService
             return roles;
         }
         
-
         public async Task<ErrorResult<bool>> ResetPasswordAsync(ApplicationUser user, string code, string password)
         {
             var result = await _userManager.ResetPasswordAsync(user, code, password);
@@ -404,8 +451,8 @@ public class IdentityService: IIdentityService
             var result = await _userManager.UpdateAsync(applicationUser);
             return result.Succeeded ? ErrorResult.Ok(true) : ErrorResult.Fail<bool>("User is locked out");
         }
-        
-        public async Task<ErrorResult<bool>> AssignPermissionsToRole(Guid roleId, List<int> permissionIds)
+
+        public async Task<ErrorResult<bool>> AssignPermissionsToRole(Guid roleId, List<PermissionsDto> permissions)
         {
             var rolePermissionsToDelete = new List<RolesPermission>();
             
@@ -421,12 +468,11 @@ public class IdentityService: IIdentityService
             }
 
             _context.RolesPermissions.RemoveRange(rolePermissionsToDelete);
-            await _context.SaveChangesAsync(new CancellationToken());
 
-            var rolePermissionList = permissionIds.Select(permissionId => new RolesPermission { RoleId = roleId, PermissionId = permissionId }).ToList();
+            var rolePermissionList = permissions.Select(permission => new RolesPermission { RoleId = roleId, PermissionId = permission.Id }).ToList();
 
             await _context.RolesPermissions.AddRangeAsync(rolePermissionList);
             var saved = await _context.SaveChangesAsync(new CancellationToken());
-            return saved > 0 ? ErrorResult.Ok(true) : ErrorResult.Fail<bool>("Unable to permissions to role");
+            return saved > 0 ? ErrorResult.Ok(true) : ErrorResult.Fail<bool>("Unable to assign permissions to role");
         }
 }

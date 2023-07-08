@@ -45,10 +45,16 @@ public sealed class ProfileService : IProfileService
                 new Claim(JwtClaimTypes.Email, user.Email),
                 new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
                 new Claim("RoleName", role.Name),
-                new Claim("RoleId", role.Id.ToString()),
-                new Claim("Permissions", string.Join(", ", permissions.Any() ? permissions?.Select(x => x.Permission)
-                    .Select(x => x.Name).ToArray() : new List<Permission>()))
+                new Claim("RoleId", role.Id.ToString())
             };
+            if (permissions.Any())
+            {
+                foreach (var permission in permissions)
+                {
+                    var claim = new Claim("permission", permission.Permission.Name);
+                    context.IssuedClaims.Add(claim);
+                }
+            }
             context.IssuedClaims = claims;
             _logger.LogInformation("Set the claims");
         }

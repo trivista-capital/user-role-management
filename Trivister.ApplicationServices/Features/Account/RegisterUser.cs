@@ -1,9 +1,11 @@
+using System.Text;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Trivister.ApplicationServices.Abstractions;
+using Trivister.ApplicationServices.Common.Helper;
 using Trivister.ApplicationServices.Dto;
 using Trivister.ApplicationServices.Exceptions;
 using Trivister.ApplicationServices.Features.Account.EventHandlers;
@@ -76,12 +78,36 @@ public class RegistrationCommandHandler: IRequestHandler<RegistrationCommand, Er
             throw new BadRequestException(isUseRoleCreatedResponse.Error);
         }
         
+        var admin = await _identityService.GetUserInRoleAsync(Guid.Parse("3e7d9440-48d7-4174-b9c5-0ea5be7d9e7d"));
+        
         //appuser!.Apply(new UserEvents.UserCreated() { Email = appuser.Email, Id = userId });
-        _publisher.Publish(new UserRegisteredEvent()
+        if (request.UserType == "Customer")
         {
-            Email = request.Email
-        });
+            _publisher.Publish(new UserRegisteredEvent()
+            {
+                Email = request.Email,
+                Name = $"{request.FirstName} {request.LastName}"
+            });
             
+            _publisher.Publish(new NewCustomerRegisteredEvent()
+            {
+                AdminEmail = admin.Email,
+                AdminName = $"{admin.FirstName} {admin.LastName}",
+                CustomerFullName = $"{request.FirstName} {request.LastName}",
+                CustomerEmailAddress = request.Email,
+                CustomerPhoneNumber = "",
+                DatOfRegistration = DateTime.UtcNow.ToString()
+            });
+        }
+        else
+        {
+            _publisher.Publish(new AdminRegisteredEvent()
+            {
+                Email = request.Email,
+                Name = $"{request.FirstName} {request.LastName}"
+            });
+        }
+
         await _customerClient.PublishCustomer(new AddCustomerCommand
         {
             Id = userId, FirstName = request.FirstName, MiddleName = "", LastName = request.LastName,

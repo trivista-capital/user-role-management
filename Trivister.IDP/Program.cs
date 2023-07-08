@@ -1,6 +1,7 @@
 ﻿using Trivister.IDP;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using Serilog.Events;
 using Trivister.ApplicationServices.Extentions;
 using Trivister.Common.Model;
 using Trivister.DataStore.Extensions;
@@ -41,6 +42,12 @@ try
     });
     builder.Host.UseSerilog((ctx, lc) => lc
         .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
+        .MinimumLevel.Debug()
+        .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+        .MinimumLevel.Override("System", LogEventLevel.Warning)
+        .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
+        .Enrich.FromLogContext()
+        .WriteTo.File("logs\\LogFile.txt")
         .Enrich.FromLogContext()
         .ReadFrom.Configuration(ctx.Configuration));
 

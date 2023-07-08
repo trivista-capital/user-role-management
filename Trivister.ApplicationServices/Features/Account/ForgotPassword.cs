@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Trivister.ApplicationServices.Abstractions;
+using Trivister.ApplicationServices.Features.Account.EventHandlers;
 using Trivister.Common.Model;
 
 namespace Trivister.ApplicationServices.Features.Account;
@@ -25,7 +26,7 @@ public static class ForgotPasswordController
     }
 }
 
-public record ForgotPasswordCommand(string Token, string Email, string NewPassword, string TokenExpiryTime) : IRequest<ErrorResult>;
+public record ForgotPasswordCommand(string Token, string Email, string NewPassword) : IRequest<ErrorResult>;
 
 public class ForgotPasswordCommandValidation: AbstractValidator<ForgotPasswordCommand>
 {
@@ -34,17 +35,19 @@ public class ForgotPasswordCommandValidation: AbstractValidator<ForgotPasswordCo
         RuleFor(x => x.Token).NotNull().NotEmpty().NotEqual("string").WithMessage("Token can not be null or empty");
         RuleFor(x => x.Email).NotNull().NotEmpty().NotEqual("string").WithMessage("Email can not be null or empty");
         RuleFor(x => x.NewPassword).NotNull().NotEmpty().NotEqual("string").WithMessage("NewPassword can not be null or empty");
-        RuleFor(x => x.TokenExpiryTime).NotNull().NotEmpty().NotEqual("string").WithMessage("TokenExpiryTime can not be null or empty");
+        //RuleFor(x => x.TokenExpiryTime).NotNull().NotEmpty().NotEqual("string").WithMessage("TokenExpiryTime can not be null or empty");
     }
 }
 public class ForgotPasswordCommandHandler: IRequestHandler<ForgotPasswordCommand, ErrorResult>
 {
         private readonly IIdentityService _identityService;
         private readonly ILogger<ForgotPasswordCommandHandler> _logger;
-        public ForgotPasswordCommandHandler(IIdentityService identityService, ILogger<ForgotPasswordCommandHandler> logger)
+        private readonly IPublisher _publisher;
+        public ForgotPasswordCommandHandler(IIdentityService identityService, ILogger<ForgotPasswordCommandHandler> logger, IPublisher publisher)
         {
             _identityService = identityService;
             _logger = logger;
+            _publisher = publisher;
         }
         
         public async Task<ErrorResult> Handle(ForgotPasswordCommand request, CancellationToken cancellationToken)
@@ -54,25 +57,31 @@ public class ForgotPasswordCommandHandler: IRequestHandler<ForgotPasswordCommand
                 var user = await _identityService.GetUserByEmail(request.Email);
                 if (user.Value.Id == default) return ErrorResult.Ok("User not found");
 
-                if (string.IsNullOrEmpty(request.TokenExpiryTime))
-                {
-                    var expiryTime = Convert.ToDateTime(request.TokenExpiryTime);
-                    if (expiryTime.CompareTo(DateTime.UtcNow) < 0) return ErrorResult.Fail<string>("Account activation link has expired");
-                    var activationResult = await _identityService.AccountActivationAsync(user.Value, ConstantKeys.DefaultPassword, request.NewPassword);
-                    if (activationResult.IsSuccess)
-                    {
-                        user.Value.EmailConfirmed = true;
-                        _ = await _identityService.UpdateUserAsync(user.Value);
-                    }
-                    return !activationResult.IsSuccess ? ErrorResult.Fail<string>(activationResult.Error) : ErrorResult.Ok("Password reset successful");
-                }
+                // if (string.IsNullOrEmpty(request.TokenExpiryTime))
+                // {
+                //     var expiryTime = Convert.ToDateTime(request.TokenExpiryTime);
+                //     if (expiryTime.CompareTo(DateTime.UtcNow) < 0) return ErrorResult.Fail<string>("Account activation link has expired");
+                //     var activationResult = await _identityService.AccountActivationAsync(user.Value, ConstantKeys.DefaultPassword, request.NewPassword);
+                //     if (activationResult.IsSuccess)
+                //     {
+                //         user.Value.EmailConfirmed = true;
+                //         _ = await _identityService.UpdateUserAsync(user.Value);
+                //     }
+                //     return !activationResult.IsSuccess ? ErrorResult.Fail<string>(activationResult.Error) : ErrorResult.Ok("Password reset successful");
+                // }
                 var result = await _identityService.ResetPassword(user.Value, request.Token, request.NewPassword);
                 if (result.IsSuccess)
                 {
                     user.Value.EmailConfirmed = true;
                     _ = await _identityService.UpdateUserAsync(user.Value);
                 }
-                return !result.IsSuccess ? ErrorResult.Fail<string>(result.Error) : ErrorResult.Ok("Password reset successful");
+
+                if (!result.IsSuccess) return ErrorResult.Fail<string>(result.Error);
+                _publisher.Publish(new PasswordSuccessfullyResetTokenEvent()
+                {
+                    Name = $"{user.Value.FirstName} {user.Value.LastName}"
+                });
+                return ErrorResult.Ok("Password reset successful");
             }
             catch (Exception ex)
             {

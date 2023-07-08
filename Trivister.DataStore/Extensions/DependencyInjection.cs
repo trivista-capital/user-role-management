@@ -18,7 +18,9 @@ public static class DependencyInjection
         services.AddIdentityCore<ApplicationUser>(option =>
         {
             option.Tokens.EmailConfirmationTokenProvider = "emailConfirmation";
-        }).AddRoles<ApplicationRole>().AddEntityFrameworkStores<IdpDbContext>();
+        }).AddRoles<ApplicationRole>().AddEntityFrameworkStores<IdpDbContext>()
+            .AddEntityFrameworkStores<IdpDbContext>()
+            .AddDefaultTokenProviders().AddTokenProvider<EmailConfirmationTokenProvider<ApplicationUser>>("emailConfirmation");
         services.Configure<IdentityOptions>(options =>
         {
             options.Password.RequireDigit = true;
